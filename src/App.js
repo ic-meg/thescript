@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import{ BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+
 import './App.css';
+import './tailwind.css';
+
+import Start from './pages/startup';
+import Play from './pages/play';
+import Shutdown from './components/shutdown';
+import Desktop from './components/Desktop/desktop'
 
 function App() {
+  useEffect(() => {
+    if (window.location.pathname !== '/') {
+      window.location.replace('/');
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Start} />
+        <Route path="/play" component={Play} /> 
+        <Route path="/desktop" component={Desktop} />
+        <Route path = "/shutdown" component= {Shutdown}/>
+      </Switch>
+    </Router>
+ 
   );
 }
 
