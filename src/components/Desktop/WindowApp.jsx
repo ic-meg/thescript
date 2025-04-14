@@ -11,7 +11,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
     <Draggable handle=".window-title-bar" nodeRef={nodeRef}>
       <div
         ref={nodeRef}
-        className="absolute top-[50px] left-[10vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px] border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 font-['Courier_New',_monospace] flex flex-col"
+        className="absolute top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px] border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 font-['Courier_New',_monospace] flex flex-col"
       >
         {/* Title Bar */}
         <div className="window-title-bar flex items-center justify-between bg-[#000080] text-white text-sm px-2 py-1 cursor-move">

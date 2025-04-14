@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './play.css';
 import logo from '../assets/icons/icon-with-name.svg';
@@ -7,7 +7,7 @@ import logo from '../assets/icons/icon-with-name.svg';
 const Play = () => {
   const [isSpinning, setIsSpinning] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setIsSpinning(true);
@@ -16,7 +16,7 @@ const Play = () => {
       setFadeOut(true);
 
       setTimeout(() => {
-        history.push('/desktop');
+        navigate('/desktop');
       }, 800); // timing after fade
     }, 2000); 
   };

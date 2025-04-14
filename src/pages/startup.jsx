@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './startup.css';
 
 const Startup = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const messages = useMemo(() => [
     "Verifying system integrity...",
@@ -30,12 +30,12 @@ const Startup = () => {
       const timeout = setTimeout(() => {
         setShouldFadeOut(true);
         setTimeout(() => {
-          history.push('/play'); 
+          navigate('/play'); 
         }, 1000); 
       }, 700); // seconds to fade
       return () => clearTimeout(timeout);
     }
-  }, [isDone, history]);
+  }, [isDone, navigate]);
   
   // Blinking cursor toggle
   useEffect(() => {

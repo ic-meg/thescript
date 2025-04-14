@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Monospace Custom';
-    src: url('./assets/fonts/Logic-Font-family/logicmonospacetrial-regular.otf') format('truetype');
+    src: url('./assets/fonts/Logic-Font-family/logicmonospacetrial-regular.otf') format('opentype');
 }
 
 @font-face {
@@ -19,4 +19,36 @@ body {
     font-family: 'Monospace Custom', Courier, monospace; 
   
   }
+  .grainy {
+    position: relative;
+    z-index: 0;
+  }
   
+  .crt-grainy::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    background: 
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(0,0,0,0.015) 1px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(0,0,0,0.015) 1px);
+    opacity: 1;
+    mix-blend-mode: overlay;
+    animation: crtPulse 0.5s infinite alternate;
+  }
+  
+  @keyframes crtPulse {
+    0% { opacity: 0.45; }
+    100% { opacity: 0.55; }
+  }
+  
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.97; }
+  }
+  
+  .flicker {
+    animation: flicker 0.2s infinite;
+  }
+    

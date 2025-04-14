@@ -2,10 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import volumeIcon from '../../assets/icons/volume.svg';
 import appIcon from '../../assets/icons/small-icon.svg';
 import shutdownIcon from '../../assets/icons/shutdown.svg';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Taskbar = ({ openApps = [], onClickApp }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [time, setTime] = useState('');
   const [startOpen, setStartOpen] = useState(false);
   const startMenuRef = useRef(null);
@@ -62,8 +62,12 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
             <button
               key={app.id}
               onClick={() => onClickApp(app.id)}
-              className="flex items-center gap-2 h-[28px] px-3 py-[2px] text-sm font-['Courier_New_Custom',_monospace] bg-[#C0C0C0] 
-                shadow-[inset_-2px_-2px_1px_#ffffff,inset_2px_2px_1px_#7E7E7E]"
+              className={`flex items-center gap-2 h-[28px] px-3 py-[2px] text-sm font-['Courier_New_Custom',_monospace] bg-[#E4E4E4] ${
+                app.isMinimized
+                  ? 'shadow-[inset_1px_1px_0px_#ffffff,inset_-1px_-1px_0px_#B0B0B0]' 
+                  : 'shadow-[inset_-2px_-2px_1px_#ffffff,inset_2px_2px_1px_black]' 
+              }`}
+              
             >
               <img src={app.icon} alt="App" className="w-[16px] h-[16px]" />
               <span className="text-[14px] leading-none">{app.title}</span>
@@ -94,7 +98,7 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
           <div className="bg-[#C0C0C0] flex flex-col justify-between p-4 w-full">
             <div className="flex-1"></div>
             <div
-              onClick={() => history.push('/shutdown')}
+              onClick={() => navigate('/shutdown')}
               className="border-t border-gray-400 pt-2 flex items-center gap-2 cursor-pointer"
             >
               <img src={shutdownIcon} alt="Shutdown" className="w-[18px] h-[16px]" />

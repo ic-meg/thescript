@@ -1,4 +1,4 @@
-import{ BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import{  Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
 
 import './App.css';
@@ -18,14 +18,14 @@ function App() {
 
   return (
 
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Start} />
-        <Route path="/play" component={Play} /> 
-        <Route path="/desktop" component={Desktop} />
-        <Route path = "/shutdown" component= {Shutdown}/>
-      </Switch>
-    </Router>
+    <Routes>
+   
+        <Route exact path="/" element={<Start />} />
+        <Route path="/play" element={<Play />} /> 
+        <Route path="/desktop" element={<Desktop />} />
+        <Route path = "/shutdown" element= {<Shutdown />}/>
+
+    </Routes>
  
   );
 }

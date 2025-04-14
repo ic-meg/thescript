@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../pages/startup.css';
 
 const Shutdown = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const messages = useMemo(() => [
     "Saving resources...",
@@ -24,12 +24,12 @@ const Shutdown = () => {
       const timeout = setTimeout(() => {
         setShouldFadeOut(true);
         setTimeout(() => {
-          history.push('/');
+          navigate('/');
         }, 1000);
       }, 1500);
       return () => clearTimeout(timeout);
     }
-  }, [isDone, history]);
+  }, [isDone, navigate]);
 
   useEffect(() => {
     const blink = setInterval(() => {
