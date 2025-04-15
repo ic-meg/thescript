@@ -57,7 +57,7 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
             <span className="text-[15px]">Start</span>
           </button>
 
-          {/* 🪟 Open App Buttons */}
+          {/*  Open App  */}
           {openApps.map((app) => (
             <button
               key={app.id}
