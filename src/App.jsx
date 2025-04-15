@@ -17,16 +17,14 @@ function App() {
   }, []);
 
   return (
-
-    <Routes>
-   
-        <Route exact path="/" element={<Start />} />
-        <Route path="/play" element={<Play />} /> 
-        <Route path="/desktop" element={<Desktop />} />
-        <Route path = "/shutdown" element= {<Shutdown />}/>
-
-    </Routes>
- 
+    <div className = "grainy-overlay">
+      <Routes>
+          <Route exact path="/" element={<Start />} />
+          <Route path="/play" element={<Play />} /> 
+          <Route path="/desktop" element={<Desktop />} />
+          <Route path = "/shutdown" element= {<Shutdown />}/>
+      </Routes>
+    </div>
   );
 }
 

@@ -6,6 +6,7 @@ import DesktopIcon from './DesktopIcon';
 import WindowApp from './WindowApp';
 import theScriptIcon from '../../assets/icons/the-script-shortcut.svg';
 import ScriptWindow from './ScriptWindow';
+import WelcomePopup from './WelcomePopUp';
 
 const Desktop = () => {
   const [apps, setApps] = useState([
@@ -73,7 +74,7 @@ const Desktop = () => {
             </WindowApp>
           )
         )}
-
+        <WelcomePopup />
         {/* Taskbar */}
         <Taskbar openApps={apps.filter(app => app.isOpen)} onClickApp={handleAppClick} />
       </div>

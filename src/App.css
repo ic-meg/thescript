@@ -19,36 +19,17 @@ body {
     font-family: 'Monospace Custom', Courier, monospace; 
   
   }
-  .grainy {
-    position: relative;
-    z-index: 0;
-  }
-  
-  .crt-grainy::before {
+  .grainy-overlay::before {
     content: '';
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
-    z-index: 50;
-    background: 
-      repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(0,0,0,0.015) 1px),
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(0,0,0,0.015) 1px);
-    opacity: 1;
-    mix-blend-mode: overlay;
-    animation: crtPulse 0.5s infinite alternate;
+    z-index: 9999;
+    background-image: url('assets/images/film-grain.jpg'); 
+    opacity: 0.2;
+    mix-blend-mode: multiply;
+    background-repeat: repeat;
   }
-  
-  @keyframes crtPulse {
-    0% { opacity: 0.45; }
-    100% { opacity: 0.55; }
-  }
-  
-  @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.97; }
-  }
-  
-  .flicker {
-    animation: flicker 0.2s infinite;
-  }
-    
