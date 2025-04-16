@@ -14,7 +14,7 @@ const WelcomePopup = () => {
 
   return (
         <div
-            className={`absolute top-4 right-4 z-50 bg-[#C0C0C0] border border-black 
+            className={`absolute top-4 right-4 z-50 bg-black border border-black 
                         w-[290px] h-[90px] shadow-md font-courier text-m 
                         transition-all duration-500 ease-out 
                         ${visible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}

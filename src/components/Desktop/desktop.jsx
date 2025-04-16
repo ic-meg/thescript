@@ -4,7 +4,7 @@ import desktopBg from '../../assets/images/desktop-bg.jpg';
 import Taskbar from './taskbar';
 import DesktopIcon from './DesktopIcon';
 import WindowApp from './WindowApp';
-import theScriptIcon from '../../assets/icons/the-script-shortcut.svg';
+import theScriptIcon from '../../assets/icons/shortcut.png';
 import ScriptWindow from './ScriptWindow';
 import WelcomePopup from './WelcomePopUp';
 

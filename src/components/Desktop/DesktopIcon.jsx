@@ -4,7 +4,7 @@ const DesktopIcon = ({ icon, label }) => {
       <img src={icon} alt={label} className="w-[32px] h-[32px] mb-1" />
       <span
         className="text-center text-[12px] font-['Courier_New',_monospace] leading-tight
-        text-black">
+        text-white">
         {label}
       </span>
     </div>

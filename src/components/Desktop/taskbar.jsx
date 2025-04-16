@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import volumeIcon from '../../assets/icons/volume.svg';
-import appIcon from '../../assets/icons/small-icon.svg';
+import appIcon from '../../assets/icons/windows.png';
 import shutdownIcon from '../../assets/icons/shutdown.svg';
 import { useNavigate } from 'react-router-dom';
 
@@ -47,7 +47,7 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
         <div className="flex items-center gap-2 text-sm">
           <button
             onClick={() => setStartOpen(!startOpen)}
-            className={`flex items-center gap-2 px-2 py-[2px] text-black bg-[#E4E4E4] border 
+            className={`flex items-center gap-2  px-2 py-[2px] text-black bg-[#E4E4E4] border 
               ${startOpen
                 ? 'shadow-[inset_4px_4px_0_#7E7E7E,inset_-4px_-4px_0_#B1B1B1,inset_2px_2px_0_#262626,inset_-2px_-2px_0_#F0F0F0]'
                 : 'shadow-[inset_2px_2px_1px_#ffffff,inset_-2px_-2px_1px_#8b8b8b]'
@@ -57,12 +57,12 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
             <span className="text-[15px]">Start</span>
           </button>
 
-          {/* 🪟 Open App Buttons */}
+          {/* Open App Buttons */}
           {openApps.map((app) => (
             <button
               key={app.id}
               onClick={() => onClickApp(app.id)}
-              className={`flex items-center gap-2 h-[28px] px-3 py-[2px] text-sm font-['Courier_New_Custom',_monospace] bg-[#E4E4E4] ${
+              className={`flex items-center gap-2 h-[24px] px-3 py-[2px] text-sm font-['Courier_New_Custom',_monospace] bg-[#COCOCO] ${
                 app.isMinimized
                   ? 'shadow-[inset_1px_1px_0px_#ffffff,inset_-1px_-1px_0px_#B0B0B0]' 
                   : 'shadow-[inset_-2px_-2px_1px_#ffffff,inset_2px_2px_1px_black]' 
