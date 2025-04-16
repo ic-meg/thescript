@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MonitorFrame from '../../components/MonitorFrame';
-import desktopBg from '../../assets/images/desktop-bg.jpg';
+import desktopBg from '../../assets/images/retroDesktopWallpaper.jpg';
 import Taskbar from './taskbar';
 import DesktopIcon from './DesktopIcon';
 import WindowApp from './WindowApp';
