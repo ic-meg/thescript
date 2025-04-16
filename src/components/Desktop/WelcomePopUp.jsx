@@ -14,7 +14,7 @@ const WelcomePopup = () => {
 
   return (
         <div
-            className={`absolute top-4 right-4 z-50 bg-black border border-black 
+            className={`absolute top-4 right-4 z-50 bg-[#C0C0C0] border border-black 
                         w-[290px] h-[90px] shadow-md font-courier text-m 
                         transition-all duration-500 ease-out 
                         ${visible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
@@ -33,7 +33,7 @@ const WelcomePopup = () => {
 
         <div className="flex items-start gap-2 px-3 py-2">
             <div className="text-red-600 text-m font-bold"></div>
-                <p className="text-xs leading-tight">
+                <p className="text-xs leading-tight text-black">
                     Welcome to <strong>The &lt;Script&gt;</strong> Portfolio! <br />
                     Thanks for visiting and enjoy the retro vibes 🎉
                 </p>

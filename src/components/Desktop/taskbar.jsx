@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import volumeIcon from '../../assets/icons/volume.svg';
 import appIcon from '../../assets/icons/windows.png';
-import shutdownIcon from '../../assets/icons/shutdown.svg';
+import shutdownIcon from '../../assets/icons/shortcut.png';
 import { useNavigate } from 'react-router-dom';
 
 const Taskbar = ({ openApps = [], onClickApp }) => {
