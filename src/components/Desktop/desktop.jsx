@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import MonitorFrame from '../../components/MonitorFrame';
 import desktopBg from '../../assets/images/retroDesktopWallpaper.jpg';
 import Taskbar from './taskbar';
@@ -7,17 +7,31 @@ import WindowApp from './WindowApp';
 import theScriptIcon from '../../assets/icons/shortcut.png';
 import ScriptWindow from './ScriptWindow';
 import WelcomePopup from './WelcomePopUp';
+import { AudioContext } from '../../contexts/AudioContext';
+import desktopMusic from '../../assets/sounds/massobeats.mp3'; 
 
 const Desktop = () => {
   const [apps, setApps] = useState([
     {
       id: 'script',
-      title: 'The <script>',
+      title: 'The <Script>',
       icon: theScriptIcon,
       isOpen: false,
       isMinimized: false,
     },
   ]);
+
+  const { playTrack, toggleMute, isMuted, currentTrack } = useContext(AudioContext);
+
+  // Continue playing the same music track when desktop mounts
+  useEffect(() => {
+    if (currentTrack !== desktopMusic) {
+      playTrack(desktopMusic, { 
+        volume: 0.3, // Lower volume for desktop
+        loop: true 
+      });
+    }
+  }, [playTrack, currentTrack]);
 
   const handleAppClick = (id) => {
     setApps(prev =>
@@ -46,7 +60,15 @@ const Desktop = () => {
   return (
     <MonitorFrame>
       <div className="relative w-full h-full overflow-hidden crt-grainy">
-        {/* Wallpaper */}
+        {/* Mute Button - Top Right Corner */}
+        <button 
+          onClick={toggleMute}
+          className="absolute top-2 right-2 bg-black bg-opacity-50 border border-white text-white px-2 py-1 text-xs font-mono z-50 hover:bg-opacity-70 transition-all"
+        >
+          {isMuted ? 'UNMUTE █' : 'MUTE ▏'}
+        </button>
+
+        {/* Wallpaper Background */}
         <img
           src={desktopBg}
           alt="Desktop Background"
@@ -60,7 +82,7 @@ const Desktop = () => {
           </div>
         </div>
 
-        {/* Open app windows */}
+        {/* Open Application Windows */}
         {apps.map(app =>
           app.isOpen && !app.isMinimized && (
             <WindowApp
@@ -74,7 +96,10 @@ const Desktop = () => {
             </WindowApp>
           )
         )}
+        
+        {/* Welcome Popup */}
         <WelcomePopup />
+        
         {/* Taskbar */}
         <Taskbar openApps={apps.filter(app => app.isOpen)} onClickApp={handleAppClick} />
       </div>
