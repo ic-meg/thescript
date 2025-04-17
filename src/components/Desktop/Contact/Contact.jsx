@@ -8,11 +8,11 @@ import socialIcon from '../../../assets/icons/image-2.png';
 
 const Contact = () => {
     return (
-        <div className="contact-container">
+        <div className="contact-container ">
             <div className="background-logo">
                 <img src={logo} alt="The Script Logo" />
             </div>
-            <div className="contact-content">
+            <div className="contact-content "> <br />
                 <h1>Contact Us</h1>
                 <p>
                     We're ready to collaborate and answer any questions you may have. 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './startup.css';
-import typingSound from '../assets/sounds/typing.mp3'; 
+import typingSound from '../assets/sounds/dial-up.mp3'; 
 import windowsStartupSound from '../assets/sounds/windows-startup.mp3';
 
 const Startup = () => {
