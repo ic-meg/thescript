@@ -6,11 +6,14 @@ import { useNavigate } from 'react-router-dom';
 
 import shutdownSound from '../../assets/sounds/windows-shutdown.mp3';
 import { AudioContext } from '../../contexts/AudioContext';
+import clickSound from '../../assets/sounds/mouse-click.mp3';
 
 const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) => 
   {
+  const clickAudioRef = useRef(null);
   const navigate = useNavigate();
   const { audioRef } = useContext(AudioContext);
+  const startButtonRef = useRef(null);
 
   const [time, setTime] = useState('');
   const [startOpen, setStartOpen] = useState(false);
@@ -33,35 +36,51 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (startMenuRef.current && !startMenuRef.current.contains(event.target)) {
+      if (
+        startMenuRef.current &&
+        !startMenuRef.current.contains(event.target) &&
+        startButtonRef.current &&
+        !startButtonRef.current.contains(event.target)
+      ) {
         setStartOpen(false);
       }
     };
-
-    if (startOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
+  
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [startOpen]);
+  }, []);
+  
 
   return (
     <>
+    <audio ref={clickAudioRef} src={clickSound} preload="auto" />
+
       <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50">
         {/* Start button */}
         <div className="flex items-center gap-2 text-sm">
-          <button
-            onClick={() => setStartOpen(!startOpen)}
-            className={`flex items-center gap-2  px-2 py-[2px] text-black bg-[#E4E4E4] border 
-              ${startOpen
-                ? 'shadow-[inset_4px_4px_0_#7E7E7E,inset_-4px_-4px_0_#B1B1B1,inset_2px_2px_0_#262626,inset_-2px_-2px_0_#F0F0F0]'
-                : 'shadow-[inset_2px_2px_1px_#ffffff,inset_-2px_-2px_1px_#8b8b8b]'
-              }`}
-          >
-            <img src={appIcon} alt="App Icon" className="w-4 h-4" />
-            <span className="text-[15px]">Start</span>
-          </button>
+        <button
+          ref={startButtonRef}
+          onClick={() => {
+            if (clickAudioRef.current) {
+              clickAudioRef.current.currentTime = 0;
+              clickAudioRef.current.play().catch(() => {});
+            }
+            setStartOpen(prev => !prev);
+          }}
+          className={`flex items-center gap-2 px-2 py-[2px] text-black bg-[#E4E4E4] border 
+            ${startOpen
+              ? 'shadow-[inset_4px_4px_0_#7E7E7E,inset_-4px_-4px_0_#B1B1B1,inset_2px_2px_0_#262626,inset_-2px_-2px_0_#F0F0F0]'
+              : 'shadow-[inset_2px_2px_1px_#ffffff,inset_-2px_-2px_1px_#8b8b8b]'
+            }`}
+        >
+          <img src={appIcon} alt="App Icon" className="w-4 h-4" />
+          <span className="text-[15px]">Start</span>
+        </button>
+
+
+
 
           {/*  Open App Buttons */}
           {openApps.map((app) => (
@@ -119,23 +138,26 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
           <div className="bg-[#C0C0C0] flex flex-col justify-between p-4 w-full">
             <div className="flex-1"></div>
             <div
-            onClick={() => {
-             
-              if (audioRef?.current) {
-                audioRef.current.pause();
-              }
+              onClick={() => {
+                if (audioRef?.current) {
+                  audioRef.current.pause();
+                }
 
-         
-              const shutdownAudio = new Audio(shutdownSound);
-              shutdownAudio.volume = 0.6;
-              shutdownAudio.play().catch(e => {
-                console.log("Failed to play shutdown sound:", e);
-                navigate('/shutdown'); 
-              });
+                const shutdownAudio = new Audio(shutdownSound);
+                shutdownAudio.volume = 0.6;
 
-                navigate('/shutdown');
+                shutdownAudio.play().then(() => {
+                  shutdownAudio.onended = () => {
+                    navigate('/shutdown');
+                  };
+                }).catch(e => {
+                  console.log("Shutdown sound error:", e);
+                  navigate('/shutdown');
+                });
+              }}
+
              
-            }}
+            
             className="border-t border-gray-400 pt-2 flex items-center gap-2 cursor-pointer"
           >
 

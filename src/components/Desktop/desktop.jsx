@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 
 import MonitorFrame from '../../components/MonitorFrame';
 import desktopBg from '../../assets/images/retroDesktopWallpaper.jpg';
@@ -14,7 +14,61 @@ import WelcomePopup from './WelcomePopUp';
 import { AudioContext } from '../../contexts/AudioContext';
 import desktopMusic from '../../assets/sounds/massobeats.mp3'; 
 
+import clickSound from '../../assets/sounds/mouse-click.mp3';
+import keySingle from '../../assets/sounds/key-single.MP3';
+import keyLoop from '../../assets/sounds/key-loop.MP3';
+
+
 const Desktop = () => {
+
+  const audioRef = useRef(null);
+
+
+  useEffect(() => {
+    let lastKeyTime = 0;
+    let loopAudio = null;
+    {/*Typing effect*/}
+    const handleKeyDown = () => {
+      const now = Date.now();
+      const timeSinceLastPress = now - lastKeyTime;
+      lastKeyTime = now;
+  
+      if (timeSinceLastPress < 150) {
+        if (!loopAudio || loopAudio.ended || loopAudio.paused) {
+          loopAudio = new Audio(keyLoop);
+          loopAudio.volume = 0.5;
+          loopAudio.play().catch(() => {});
+        }
+      } else {
+        const singleAudio = new Audio(keySingle);
+        singleAudio.volume = 0.4;
+        singleAudio.play().catch(() => {});
+      }
+    };
+  
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      if (loopAudio) {
+        loopAudio.pause();
+        loopAudio = null;
+      }
+    };
+  }, []);
+  
+   {/*Clicking effect*/}
+  useEffect(() => {
+    const handleClick = () => {
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0; 
+        audioRef.current.play().catch(() => {});
+      }
+    };
+
+    window.addEventListener('click', handleClick);
+    return () => window.removeEventListener('click', handleClick);
+  }, []);
+
   const [apps, setApps] = useState([
     {
       id: 'script',
@@ -63,8 +117,8 @@ const Desktop = () => {
 
   return (
     <MonitorFrame>
+      <audio ref={audioRef} src={clickSound} preload="auto" />
       <div className="relative w-full h-full overflow-hidden crt-grainy">
-
 
         {/* Wallpaper Background */}
         <img
