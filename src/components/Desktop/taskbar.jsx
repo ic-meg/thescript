@@ -147,9 +147,9 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
                 shutdownAudio.volume = 0.6;
 
                 shutdownAudio.play().then(() => {
-                  shutdownAudio.onended = () => {
+                  
                     navigate('/shutdown');
-                  };
+                  
                 }).catch(e => {
                   console.log("Shutdown sound error:", e);
                   navigate('/shutdown');
