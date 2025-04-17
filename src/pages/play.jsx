@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import './play.css';
 import logo from '../assets/icons/icon-with-name.svg';
+
 import vinylSound from '../assets/sounds/massobeats.mp3';
 import { AudioContext } from '../contexts/AudioContext';
 

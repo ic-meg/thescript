@@ -99,7 +99,7 @@ const SidebarLayout = ({ children, activeTab, setActiveTab }) => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 pl-6 overflow-auto max-h-full">
+      <div className="flex-1 pl-6 overflow-auto max-h-full pr-6 scrollbar-inset">
         {children}
       </div>
     </div>

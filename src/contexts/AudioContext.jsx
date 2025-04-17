@@ -17,9 +17,11 @@ export const AudioProvider = ({ children }) => {
     audioRef.current.loop = options.loop || false;
     setCurrentTrack(src);
     
-    const playPromise = audioRef.current.play().catch(e => {
-      console.log("Audio play prevented:", e);
+    audioRef.current.play().catch(e => {
+      
+      console.log("Typing sound play prevented:", e);
     });
+    
   };
 
   const toggleMute = () => {

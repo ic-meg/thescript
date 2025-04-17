@@ -1,11 +1,17 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import volumeIcon from '../../assets/icons/volume.svg';
 import appIcon from '../../assets/icons/windows.png';
 import shutdownIcon from '../../assets/icons/shortcut.png';
 import { useNavigate } from 'react-router-dom';
 
-const Taskbar = ({ openApps = [], onClickApp }) => {
+import shutdownSound from '../../assets/sounds/windows-shutdown.mp3';
+import { AudioContext } from '../../contexts/AudioContext';
+
+const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) => 
+  {
   const navigate = useNavigate();
+  const { audioRef } = useContext(AudioContext);
+
   const [time, setTime] = useState('');
   const [startOpen, setStartOpen] = useState(false);
   const startMenuRef = useRef(null);
@@ -75,13 +81,28 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
 
           ))}
         </div>
-
-        {/* Clock */}
+      {/*  Clock and volume */}
         <div className="flex items-center gap-2 px-2 h-[32px] w-auto bg-[#E4E4E4]
-          shadow-[inset_-2px_-2px_0_#F0F0F0,inset_2px_2px_0_#7E7E7E] text-[14px]">
-          <img src={volumeIcon} alt="Volume Icon" className="w-[14px] h-[12px]" />
-          <span>{time}</span>
-        </div>
+        shadow-[inset_-2px_-2px_0_#F0F0F0,inset_2px_2px_0_#7E7E7E] text-[14px]">
+
+        <button
+          onClick={toggleMute}
+          className="relative w-[18px] h-[18px] flex items-center justify-center cursor-pointer hover:brightness-110"
+          title={isMuted ? "Unmute" : "Mute"}
+        >
+          <img src={volumeIcon} alt="Volume Icon" className="w-[14px] h-[14px]" />
+          
+          {isMuted && (
+            <div className="absolute w-[16px] h-[16px] flex items-center justify-center">
+              <span className="absolute text-[16px] text-red-600 font-bold leading-none rotate-[35deg] -translate-y-[1px]">/</span>
+            </div>
+          )}
+        </button>
+
+        <span className="">{time}</span>
+      </div>
+
+
       </div>
 
       {/* Start Menu */}
@@ -98,9 +119,26 @@ const Taskbar = ({ openApps = [], onClickApp }) => {
           <div className="bg-[#C0C0C0] flex flex-col justify-between p-4 w-full">
             <div className="flex-1"></div>
             <div
-              onClick={() => navigate('/shutdown')}
-              className="border-t border-gray-400 pt-2 flex items-center gap-2 cursor-pointer"
-            >
+            onClick={() => {
+             
+              if (audioRef?.current) {
+                audioRef.current.pause();
+              }
+
+         
+              const shutdownAudio = new Audio(shutdownSound);
+              shutdownAudio.volume = 0.6;
+              shutdownAudio.play().catch(e => {
+                console.log("Failed to play shutdown sound:", e);
+                navigate('/shutdown'); 
+              });
+
+                navigate('/shutdown');
+             
+            }}
+            className="border-t border-gray-400 pt-2 flex items-center gap-2 cursor-pointer"
+          >
+
               <img src={shutdownIcon} alt="Shutdown" className="w-[18px] h-[16px]" />
               <span className="text-[14px] text-black">Shut down...</span>
             </div>

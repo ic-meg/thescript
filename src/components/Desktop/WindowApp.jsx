@@ -19,9 +19,12 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
             <img src={icon} alt="App Icon" className="w-4 h-4" />
             <span className="font-bold text-[13px]">{title}</span>
           </div>
-          <div className="space-x-1">
+          <div className="flex items-center gap-[2px]">
+            {/* Minimize Button */}
             <button
-              className="bg-gray-300 text-black px-1 w-[22px] h-[20px] leading-none border border-black"
+              className="bg-gray-300 text-black w-[22px] h-[20px] text-[13px] border border-black 
+                        shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
+                        hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={() => {
                 setIsMinimized(true);
                 onMinimize?.();
@@ -29,13 +32,20 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
             >
               _
             </button>
+
+            {/* Close Button */}
             <button
-              className="bg-gray-300 text-black px-1 w-[22px] h-[20px] leading-none border border-black"
+              className="bg-gray-300 text-black w-[22px] h-[20px] text-[13px] border border-black 
+                        shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
+                        hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={onClose}
             >
               X
             </button>
           </div>
+
+
+
         </div>
 
         {/* Content */}

@@ -1,11 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
+
 import './App.css';
 import './tailwind.css';
+
 import Start from './pages/startup';
 import Play from './pages/play';
 import Shutdown from './components/shutdown';
 import Desktop from './components/Desktop/desktop';
+
 import { AudioProvider } from './contexts/AudioContext'; 
 
 function App() {

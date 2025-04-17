@@ -2,8 +2,8 @@ import landscapeImage from '../../../assets/images/landscape.jpg';
 
 const About = () => {
   return (
-    <div className="space-y-4 pb-20"> 
-      <h2 className="text-2xl font-bold">“Not the band, but a Team of Developer”</h2>
+    <div className="space-y-4 pb-20 text-justify">  <br />
+      <h2 className="text-2xl font-bold">“Not the band, <br></br> but a Team of Developer”</h2>
       
       <div className="space-y-6">
         <section>
@@ -45,33 +45,38 @@ const About = () => {
         </section> 
 
         <hr className="border-t border-gray-300 my-6" />
+        <hr className="border-t border-gray-300 my-6" />
 
         <section className="pt-6">
           <h3 className="text-xl font-semibold mb-4">Mission and Vision</h3>
-          <p className="text-lg">
-            Our mission is to continuously grow, learn, and develop our skills to become the best developers in the future. As a team, we are committed to innovation, collaboration, and excellence, pushing ourselves to create high-quality solutions while embracing challenges that help us improve.
-          </p>
-          <p className="text-lg mt-4">
-            We envision a future where The &lt;Script&gt; stands as a team of professional developers, taking on projects together with passion, expertise, and creativity. Through teamwork and dedication, we aim to make a meaningful impact in the tech industry, building solutions that matter.
-          </p>
+
+          <div className="flex flex-col lg:flex-row gap-6 items-start">
+            {/* Left: Text */}
+            <div className="flex-1 space-y-4 text-justify">
+              <p className="text-lg">
+                Our mission is to continuously grow, learn, and develop our skills to become the best developers in the future. As a team, we are committed to innovation, collaboration, and excellence, pushing ourselves to create high-quality solutions while embracing challenges that help us improve.
+              </p>
+              <p className="text-lg">
+                We envision a future where The &lt;Script&gt; stands as a team of professional developers, taking on projects together with passion, expertise, and creativity. Through teamwork and dedication, we aim to make a meaningful impact in the tech industry, building solutions that matter.
+              </p>
+            </div>
+
+            {/* Right: Portrait Image */}
+            <div className="w-full lg:w-[250px] flex flex-col items-center rounded-lg overflow-hidden justify-center">
+              <img 
+                src={landscapeImage} 
+                alt="The Script Team on April 3, 2025" 
+                className="w-[250px] h-[550px] object-cover object-center"
+              />
+              <p className="text-sm mt-2 text-center">
+                <strong>Figure 2.</strong> APR 3 2025, US
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section className="pt-6">
-          <div className="bg-gray-200 rounded-lg overflow-hidden">
-            <img 
-              src={landscapeImage} 
-              alt="The Script Team on April 3, 2025" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          <p className="text-sm mt-2 text-center">
-            <strong>Figure 2.</strong> APR 3 2025, US
-          </p>
-        </section> 
 
-        <footer className="pt-8 text-center text-sm">
-          <p>© 2025 The &lt;Script&gt;</p>
-        </footer>
+
       </div>
     </div>
   );
