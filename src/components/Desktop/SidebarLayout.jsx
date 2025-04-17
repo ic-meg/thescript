@@ -17,7 +17,7 @@ const SidebarLayout = ({ children, activeTab, setActiveTab }) => {
     <div className="w-full h-full bg-[#EFF6F8] font-courier text-black p-6 flex relative">
       {/* Sidebar */}
       <div className="w-[200px] border-r border-gray-400 pr-4">
-        <div className="font-bold text-[20px] mb-1">The &lt;Script&gt;</div>
+        <div className="font-bold text-[20px] mb-1">The&lt;Script&gt;</div>
         <div className="text-xs text-black/70 mb-6">Showcase ’25</div>
 
         <nav className="flex flex-col gap-1 text-[18px] pl-6 mt-[80px]">

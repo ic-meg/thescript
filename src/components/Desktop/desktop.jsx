@@ -139,7 +139,7 @@ const Desktop = () => {
           app.isOpen && !app.isMinimized && (
             <WindowApp
               key={app.id}
-              title="The &lt;Script&gt; - Showcase 2025"
+              title="The&lt;Script&gt; - Showcase 2025"
               icon={app.icon}
               onClose={() => handleClose(app.id)}
               onMinimize={() => handleMinimize(app.id)}

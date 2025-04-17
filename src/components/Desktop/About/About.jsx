@@ -8,10 +8,10 @@ const About = () => {
       <div className="space-y-6">
         <section>
           <p className="text-lg">
-            We are The &lt;Script&gt;—not the band, but a team of passionate developers! Currently, we are third-year Bachelor of Science in Information Technology students at Cavite State University - Imus Campus, striving to sharpen our skills and grow into professional developers. Though we're still students, we are committed to giving our best in every project we take on.
+            We are The&lt;Script&gt;—not the band, but a team of passionate developers! Currently, we are third-year Bachelor of Science in Information Technology students at Cavite State University - Imus Campus, striving to sharpen our skills and grow into professional developers. Though we're still students, we are committed to giving our best in every project we take on.
           </p>
           <p className="text-lg mt-4">
-            Together, we are The &lt;Script&gt;—a team built on passion, collaboration, and the drive to become the best developers we can be! 🚀💻
+            Together, we are The&lt;Script&gt;—a team built on passion, collaboration, and the drive to become the best developers we can be! 🚀💻
           </p>
         </section>
 
@@ -21,7 +21,7 @@ const About = () => {
         <section className="pt-6">
           <h3 className="text-xl font-semibold mb-4">About us</h3>
           <p className="text-lg">
-            The name <b>"The &lt;Script&gt;"</b> is inspired by the concept of JavaScript, which play a big role in our project. We also added the &lt;script&gt; tag as a symbol of our journey—we are just starting, and we hope it never ends.
+            The name <b>"The&lt;Script&gt;"</b> is inspired by the concept of JavaScript, which play a big role in our project. We also added the &lt;script&gt; tag as a symbol of our journey—we are just starting, and we hope it never ends.
           </p>
           <p className="text-lg mt-4">
             We are not the famous band <b>"The Script"</b>, but a group of 3rd-year college students passionate about web development. This portfolio is not just for showcasing our skills but also for future opportunities. We want it to be something we can use as a reference as we grow in our careers.
@@ -37,7 +37,7 @@ const About = () => {
             />
           </div>
           <p className="text-sm mt-2 text-center">
-            <strong>Figure 1.</strong> The Script Team Members
+            <strong>Figure 1.</strong> The&lt;Script&gt; Team Members
           </p>
           <p className="text-lg mt-4">
             To build this portfolio, we used <b>ReactJS, Tailwind CSS,</b> and <b>React Router</b>. These tools helped us create a smooth, modern, and responsive design. This project reflects our dedication and creativity, and we hope it inspires others who are also starting their journey in web development.
@@ -56,7 +56,7 @@ const About = () => {
                 Our mission is to continuously grow, learn, and develop our skills to become the best developers in the future. As a team, we are committed to innovation, collaboration, and excellence, pushing ourselves to create high-quality solutions while embracing challenges that help us improve.
               </p>
               <p className="text-lg">
-                We envision a future where The &lt;Script&gt; stands as a team of professional developers, taking on projects together with passion, expertise, and creativity. Through teamwork and dedication, we aim to make a meaningful impact in the tech industry, building solutions that matter.
+                We envision a future where The&lt;Script&gt; stands as a team of professional developers, taking on projects together with passion, expertise, and creativity. Through teamwork and dedication, we aim to make a meaningful impact in the tech industry, building solutions that matter.
               </p>
             </div>
 

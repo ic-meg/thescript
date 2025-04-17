@@ -34,7 +34,7 @@ const WelcomePopup = () => {
         <div className="flex items-start gap-2 px-3 py-2">
             <div className="text-red-600 text-m font-bold"></div>
                 <p className="text-xs leading-tight text-black">
-                    Welcome to <strong>The &lt;Script&gt;</strong> Portfolio! <br />
+                    Welcome to <strong>The&lt;Script&gt;</strong> Portfolio! <br />
                     Thanks for visiting and enjoy the retro vibes 🎉
                 </p>
         </div>

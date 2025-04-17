@@ -61,8 +61,8 @@ const Shutdown = () => {
   return (
     <div className={`startup-screen ${shouldFadeOut ? 'fade-out' : ''}`}> 
       <div className="startup-content text-white">
-        <p><strong>The &lt;Script&gt;.</strong>   Shut down Initiated: 03/24/2025</p>
-        <p><strong>The &lt;Script&gt; Inc.</strong>   TSBIOS © 2000 The Script Inc.,</p>
+        <p><strong>The&lt;Script&gt;.</strong>   Shut down Initiated: 03/24/2025</p>
+        <p><strong>The&lt;Script&gt; Inc.</strong>   TSBIOS © 2000 The Script Inc.,</p>
         <br />
         <p>SIBIOS S13 2000–2025 Special Edition</p>
         <br />

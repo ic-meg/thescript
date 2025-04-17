@@ -11,7 +11,7 @@ const Home = ({ setActiveTab }) => {
       </nav>
 
       <div>
-        <h1 className="text-4xl sm:text-5xl font-bold">The &lt;Script&gt;</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold">The&lt;Script&gt;</h1>
         <p className="text-sm mt-2 font-semibold">Learning. Building. Innovating.</p>
       </div>
     </div>
