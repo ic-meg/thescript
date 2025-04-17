@@ -44,8 +44,7 @@ const About = () => {
           </p>
         </section> 
 
-        <hr className="border-t border-gray-300 my-6" />
-        <hr className="border-t border-gray-300 my-6" />
+    
 
         <section className="pt-6">
           <h3 className="text-xl font-semibold mb-4">Mission and Vision</h3>
