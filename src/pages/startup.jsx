@@ -114,8 +114,8 @@ const Startup = () => {
 
 
       <div className="startup-content">
-        <p>The Script. Released: 03/24/2025</p>
-        <p>The Script Inc. TSBIOS © 2000 The Script Inc.</p><br /><br />
+        <p>The &lt;Script&gt;. Released: 03/24/2025</p>
+        <p>The &lt;Script&gt; Inc. TSBIOS © 2000 The Script Inc.</p><br /><br />
         <p>SIBIOS S13 2000–2025 Special Edition</p><br />
         <p>Script Interactive Bootloader (SIB) v3.7</p>
         <p>Checking RAM: 16384 MB OK</p><br />
