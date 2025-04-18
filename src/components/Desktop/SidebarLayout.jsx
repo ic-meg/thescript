@@ -20,7 +20,7 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
       <div className="flex items-start sticky top-0">
       {/* Sidebar */}
       <div className="w-[200px] sticky top-0 h-fit bg-[#F0F0F0] p-6 self-start">
-        <div className="font-bold text-[18px] mb-1 leading-tight text-nowrap">The &lt;Script&gt;</div>
+        <div className="font-bold text-[18px] mb-1 leading-tight text-nowrap">The&lt;Script&gt;</div>
         <div className="text-[20px] text-black/70 mb-6">Showcase ’25</div>
 
         <nav className="flex flex-col gap-1 text-[18px] pl-2 mt-[80px]">

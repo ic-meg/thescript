@@ -12,7 +12,7 @@
   }
   @font-face {
     font-family: 'VT323 Custom';
-    src: url('./assets/fonts/vt323/VT323-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/VT323/VT323-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }

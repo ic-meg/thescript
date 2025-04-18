@@ -13,13 +13,13 @@ const Software = () => {
         </p>
       </div>
 
-      <hr className="border border-black/50" />
+      <hr className="border border-black/50" /> 
 
       {/* Project Description */}
       <div>
-        <h3 className="text-[26px] font-black font-vt323">thescript.com</h3>
+        <h3 className="text-[26px] font-black font-vt323">the&lt;script&gt;.com</h3>
         <p className="text-[15px] max-w-[750px] text-justify mt-2">
-          thescript.com is our team’s portfolio site — the one you're viewing right now!
+          the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
           This project was built as part of our Web Systems & Technologies 2 midterm.
           It's fully inspired by the classic Windows 95 look, and includes animated UI,
           retro assets, and project windows to simulate an old-school OS.
