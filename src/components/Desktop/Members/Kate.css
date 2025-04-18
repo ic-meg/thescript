@@ -1,6 +1,6 @@
 
 .body {
-    font-family: 'Press Start 2P';
+    font-family: 'VT323 Custom';
     justify-content: center;
     padding: 50px;
   }
@@ -61,3 +61,62 @@
     height: 40px;
     margin-bottom: 5px;
   }
+
+  .retro-btn {
+    background: #C0C0C0;
+    border: 2px solid #808080;
+    padding: 6px 12px;
+    box-shadow:
+      inset -1px -1px 0 #fff,
+      inset 1px 1px 0 #000,
+      2px 2px 0 #404040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 60px;
+  }
+  
+  .retro-btn:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+  }
+  
+  .retro-btn:active {
+    box-shadow:
+      inset 1px 1px 0 #000,
+      inset -1px -1px 0 #fff;
+  }
+  .win95-btn {
+    background-color: #C0C0C0;
+    border: 2px solid #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    padding: 6px;
+    width: 100px;              
+    height: 41px;             
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    image-rendering: pixelated;
+    box-shadow:
+      inset -1px -1px 0 #808080,
+      inset 1px 1px 0 #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .win95-btn:active {
+    border-color: #808080;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    box-shadow:
+      inset 1px 1px 0 #404040,
+      inset -1px -1px 0 #f0f0f0;
+  }
+  .tech-label {
+    font-family: 'VT323 Custom', monospace;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
+  
