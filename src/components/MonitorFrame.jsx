@@ -1,6 +1,6 @@
 import React from 'react';
 import monitor from '../assets/images/apple.png';
-import beatGif from '../assets/images/beat.gif'; // Import the beat.gif
+import beatGif from '../assets/images/beat.gif'; 
 
 const MonitorFrame = ({ children }) => {
   return (

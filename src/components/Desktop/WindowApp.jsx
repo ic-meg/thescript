@@ -14,7 +14,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
         className="absolute top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px] border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 font-['Courier_New',_monospace] flex flex-col"
       >
         {/* Title Bar */}
-        <div className="window-title-bar flex items-center justify-between bg-[#000080] text-white text-sm px-2 py-1 cursor-move">
+        <div className="window-title-bar flex items-center justify-between bg-[#202055] text-white text-sm px-2 py-1 cursor-move">
           <div className="flex items-center gap-2">
             <img src={icon} alt="App Icon" className="w-4 h-4" />
             <span className="font-bold text-[13px]">{title}</span>
@@ -49,21 +49,22 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-auto p-4 text-sm text-black">
+        <div className={`flex-1 p-4 text-sm text-black ${title === 'Contact' ? 'overflow-y-hidden' : 'overflow-auto'}`}>
+
           {children}
         </div>
 
         <div className="flex items-center justify-between h-[22px] bg-[#E4E4E4] border-t border-gray-500 text-[10px] text-black px-[2px] gap-[2px]">
-          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] leading-none">
+          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] text-[12px]  leading-none">
             © 2025 The Script
           </div>
           <div className="flex gap-[2px]">
-            <div className="w-[16px] h-[15px] border border-gray-400 bg-[#F0F0F0]" />
-            <div className="w-[16px] h-[15px] border border-gray-400 bg-[#F0F0F0]" />
+            <div className="w-[18px] h-[18px] border border-gray-400 bg-[#F0F0F0]" />
+            <div className="w-[18px] h-[18px] border border-gray-400 bg-[#F0F0F0]" />
             
           </div>
 
-          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] leading-none text-transparent">
+          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] text-[12px]  leading-none text-transparent">
               placeholder
           </div>
         </div>

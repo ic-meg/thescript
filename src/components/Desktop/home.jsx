@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = ({ setActiveTab }) => {
   return (
-    <div className="w-full h-full bg-[#EFF6F8] text-black flex flex-col items-center justify-center text-center px-4 py-6 gap-6 font-courier">
+    <div className="w-full h-full bg-[#] text-black flex flex-col items-center justify-center text-center px-4 py-6 gap-6 font-courier">
       <nav className="text-[16px] sm:text-[18px] md:text-[20px] space-x-4 flex flex-wrap justify-center">
         <button onClick={() => setActiveTab('about')} className="hover:underline underline-offset-2">about us</button>
         <button onClick={() => setActiveTab('projects')} className="hover:underline underline-offset-2">projects</button>
