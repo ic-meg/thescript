@@ -17,8 +17,8 @@ const Kate = () => {
   return (
     <MemberProfile
       name="Kate Serrano"
-      title="Frontend Developer, Designer"
-      email="kateserrano@gmail.com"
+      title="Frontend Developer"
+      email="kateserrano104@gmail.com"
       hashtag="#ByteMeKate"
       avatar={avatar}
       buttons={[
@@ -34,6 +34,8 @@ const Kate = () => {
         { src: SQL, label: "MySQL" },
         { src: Figma, label: "Figma" },
       ]}
+      funFact="Beyond coding, I enjoy exploring new activities for entertainment—whether it's creating content on TikTok, playing games, or going on early morning rides at dawn. As someone who loves trying out new experiences, I’m always on the lookout for fun and refreshing ways to spend my free time. Additionally, nasa page po ni giul"
+      motto="Explore Beyond the Comfort Zone"
     />
   );
 };
