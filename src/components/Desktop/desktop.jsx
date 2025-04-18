@@ -27,7 +27,8 @@ const Desktop = () => {
   useEffect(() => {
     let lastKeyTime = 0;
     let loopAudio = null;
-    {/*Typing effect*/}
+    
+    /*Typing effect*/
     const handleKeyDown = () => {
       const now = Date.now();
       const timeSinceLastPress = now - lastKeyTime;
@@ -56,7 +57,7 @@ const Desktop = () => {
     };
   }, []);
   
-   {/*Clicking effect*/}
+   /*Clicking effect*/
   useEffect(() => {
     const handleClick = () => {
       if (audioRef.current) {

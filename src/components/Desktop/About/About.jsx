@@ -2,7 +2,7 @@ import landscapeImage from '../../../assets/images/landscape.jpg';
 
 const About = () => {
   return (
-    <div className="space-y-4 pb-20 text-justify">  <br />
+    <div className="space-y-4 pb-20 text-justify font-courier">  <br />
       <h2 className="text-2xl font-bold">“Not the band, <br></br> but a Team of Developer”</h2>
       
       <div className="space-y-6">

@@ -22,7 +22,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
           <div className="flex items-center gap-[2px]">
             {/* Minimize Button */}
             <button
-              className="bg-gray-300 text-black w-[22px] h-[20px] text-[13px] border border-black 
+              className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={() => {
@@ -35,7 +35,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
 
             {/* Close Button */}
             <button
-              className="bg-gray-300 text-black w-[22px] h-[20px] text-[13px] border border-black 
+              className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={onClose}
@@ -55,7 +55,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
         </div>
 
         <div className="flex items-center justify-between h-[22px] bg-[#E4E4E4] border-t border-gray-500 text-[10px] text-black px-[2px] gap-[2px]">
-          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] leading-none">
+          <div className="w-full px-2 py-[2px] border border-gray-400 text-[12px] bg-[#E4E4E4] leading-none">
             © 2025 The Script
           </div>
           <div className="flex gap-[2px]">

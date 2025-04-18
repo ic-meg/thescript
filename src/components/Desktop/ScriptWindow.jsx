@@ -20,7 +20,7 @@ const ScriptWindow = () => {
         return <About />;
   
       case 'projects':
-        return <Projects />;
+        return <Projects activeTab={activeTab} setActiveTab={setActiveTab} />;
   
       case 'software':
         return <Software />;
@@ -29,7 +29,7 @@ const ScriptWindow = () => {
         return <Arduino />;
   
       case 'members':
-        return <Members />;
+        return <Members activeTab={activeTab} setActiveTab={setActiveTab} />;
   
       case 'giuliani':
         return <Gil />;

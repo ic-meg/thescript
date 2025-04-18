@@ -10,14 +10,24 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'VT323 Custom';
+    src: url('./assets/fonts/vt323/VT323-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   
 
 body {
+    cursor: url('assets/cursors/default_arrow.cur'), auto;
     background-color: black;
     color: white; 
     margin: 0; 
     font-family: 'Monospace Custom', Courier, monospace; 
   
+  }
+  a, button, .cursor-pointer {
+    cursor: url('assets/cursors/default_link.cur'), pointer;
   }
   .grainy-overlay::before {
     content: '';
