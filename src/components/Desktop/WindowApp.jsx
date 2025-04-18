@@ -55,7 +55,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
         </div>
 
         <div className="flex items-center justify-between h-[22px] bg-[#E4E4E4] border-t border-gray-500 text-[10px] text-black px-[2px] gap-[2px]">
-          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] text-[12px]  leading-none">
+          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] leading-none">
             © 2025 The Script
           </div>
           <div className="flex gap-[2px]">

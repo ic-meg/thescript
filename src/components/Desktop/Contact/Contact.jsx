@@ -26,7 +26,7 @@ const Contact = () => {
                     </div>
                     <div className="contact-item">
                         <img src={emailIcon} alt="Email" className="contact-icon" />
-                        <span>thescript@gmail.com</span>
+                        <span>the&lt;script&gt;@gmail.com</span>
                     </div>
                     <div className="contact-item">
                         <img src={githubIcon} alt="GitHub" className="contact-icon" />

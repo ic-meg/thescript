@@ -130,7 +130,7 @@ const Desktop = () => {
         {/* Desktop Icons */}
         <div className="absolute top-2 left-2 flex flex-col gap-3 z-10">
           <div onClick={() => handleAppClick('script')}>
-            <DesktopIcon icon={theScriptIcon} label="The <script>" />
+            <DesktopIcon icon={theScriptIcon} label="The <Script>" />
           </div>
         </div>
 
@@ -139,7 +139,7 @@ const Desktop = () => {
           app.isOpen && !app.isMinimized && (
             <WindowApp
               key={app.id}
-              title="The Script - Showcase 2025"
+              title="The&lt;Script&gt; - Showcase 2025"
               icon={app.icon}
               onClose={() => handleClose(app.id)}
               onMinimize={() => handleMinimize(app.id)}
