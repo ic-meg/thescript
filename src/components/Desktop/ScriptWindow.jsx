@@ -13,6 +13,11 @@ import Home from './home';
 
 const ScriptWindow = () => {
   const [activeTab, setActiveTab] = useState('home');
+  const [sidebarState, setSidebarState] = useState({
+    expandProjects: false,
+    expandMembers: false
+  });
+
 
   const renderContent = () => {
     switch (activeTab) {
@@ -56,9 +61,26 @@ const ScriptWindow = () => {
   
 
   return activeTab === 'home' ? (
-    <Home setActiveTab={setActiveTab} />
+    <Home
+      setActiveTab={(tab) => {
+        
+        if (tab === 'projects') {
+          setSidebarState({ expandProjects: true, expandMembers: false });
+        } else if (tab === 'members') {
+          setSidebarState({ expandProjects: false, expandMembers: true });
+        } else {
+          setSidebarState({ expandProjects: false, expandMembers: false });
+        }
+        setActiveTab(tab);
+      }}
+    />
+
   ) : (
-    <SidebarLayout activeTab={activeTab} setActiveTab={setActiveTab}>
+    <SidebarLayout
+      activeTab={activeTab}
+      setActiveTab={setActiveTab}
+      sidebarState={sidebarState}
+    >
       {renderContent()}
     </SidebarLayout>
   );

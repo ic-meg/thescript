@@ -132,7 +132,7 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
         >
           <div className="bg-[#8F8F8F] w-[40px] flex items-center justify-center">
             <span className="-rotate-90 absolute bottom-[70px] left-[-42px] text-white text-[16px] font-bold whitespace-nowrap leading-none">
-              The&lt;Script&gt;
+              The &lt;Script&gt;
             </span>
           </div>
           <div className="bg-[#C0C0C0] flex flex-col justify-between p-4 w-full">

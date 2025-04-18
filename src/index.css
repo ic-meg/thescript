@@ -6,3 +6,5 @@ main {
 a, button, .cursor-pointer {
   cursor: url('assets/cursors/default_link.cur'), pointer;
 }
+
+

@@ -18,7 +18,7 @@ const Projects = ({ setActiveTab, activeTab }) => {
             <h1 className="text-[40px] font-black font-courier">Projects</h1>
           </div>
 
-          <p className="max-w-[700px] text-[14px] leading-relaxed font-courier text-justify">
+          <p className="max-w-[700px] text-[15px] leading-relaxed font-courier text-justify">
             Click on one of the areas below to check out some of our team’s projects! From the digital world to physical circuits, we made sure to explore and enjoy the process of making. 🛠️
           </p>
 
