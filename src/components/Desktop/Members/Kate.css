@@ -1,0 +1,63 @@
+
+.body {
+    font-family: 'Press Start 2P';
+    justify-content: center;
+    padding: 50px;
+  }
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+  
+  .info h1 {
+    font-family: 'VT323';
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  .info p {
+    margin: 5px 0;
+  }
+  
+  .buttons {
+    width: 30%;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+
+  }
+  
+  .buttons button {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: C3C3C3;
+  }
+  
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .skills div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skills img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
