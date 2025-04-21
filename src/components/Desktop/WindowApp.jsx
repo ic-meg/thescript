@@ -3,7 +3,7 @@ import Draggable from 'react-draggable';
 
 const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
   const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(true);
   const nodeRef = useRef(null);
 
   if (isMinimized) return null;
@@ -12,13 +12,13 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
     <Draggable
       handle=".window-title-bar, .box"
       nodeRef={nodeRef}
-      disabled={isFullscreen} 
+       bounds="parent"
     >
       <div
         ref={nodeRef}
         className={`absolute ${isFullscreen ? 'top-0 left-0 w-full h-full' : 'top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px]'}
           border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 
-          font-['Courier_New',_monospace] flex flex-col overflow-hidden transition-all duration-300`}
+          font-['Courier_New',_monospace] flex flex-col overflow-hidden `}
       >
         {/* Title Bar */}
         <div className="window-title-bar flex items-center justify-between bg-[#000080] text-white text-sm px-2 py-1 cursor-move">
@@ -33,7 +33,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={() => {
-                setIsMinimized(true);
+                setIsMinimized(false);
                 onMinimize?.();
               }}
             >

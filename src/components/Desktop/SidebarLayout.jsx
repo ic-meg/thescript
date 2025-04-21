@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { HiMenu, HiX } from 'react-icons/hi';
 
 const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
   const [showProjects, setShowProjects] = useState(false);
   const [showMembers, setShowMembers] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const showProjectTabs = ['projects', 'software', 'arduino', 'ui', 'game'];
@@ -16,14 +18,28 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
     activeTab === tab ? 'underline font-bold decoration-[#B3A5A5] underline-offset-4' : '';
 
   return (
-    <div className="w-full font-courier text-black flex items-stretch">
-      <div className="flex items-start sticky top-0">
-      {/* Sidebar */}
-      <div className="w-[200px] sticky top-0 h-fit bg-[#F0F0F0] p-6 self-start">
-        <div className="font-bold text-[18px] mb-1 leading-tight text-nowrap">The&lt;Script&gt;</div>
-        <div className="text-[20px] text-black/70 mb-6">Showcase ’25</div>
+    <div className="w-full font-courier text-black flex flex-col md:flex-row">
 
-        <nav className="flex flex-col gap-1 text-[18px] pl-2 mt-[80px]">
+      {/*  Hamburger */}
+      <div className="md:hidden px-4 py-3 flex justify-between items-center border-b border-gray-300">
+        <div className="font-bold text-[18px]">The&lt;Script&gt;</div>
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      <div
+        className={`${
+          isMobileMenuOpen ? 'block' : 'hidden'
+        } md:block w-full md:w-[200px] bg-[#F0F0F0] p-6 md:sticky md:top-0 self-start h-fit `}
+      >
+        <div className="font-bold text-[18px] mb-1 leading-tight text-nowrap md:block hidden">
+          The&lt;Script&gt;
+        </div>
+        <div className="text-[20px] text-black/70 mb-6 md:block hidden">Showcase ’25</div>
+
+        <nav className="flex flex-col gap-1 text-[18px] pl-2 mt-[40px] md:mt-[80px]">
           <p className={`cursor-pointer hover:underline ${isActive('home')}`} onClick={() => setActiveTab('home')}>Home</p>
           <p className={`cursor-pointer hover:underline ${isActive('about')}`} onClick={() => setActiveTab('about')}>About us</p>
 
@@ -32,13 +48,31 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
               setActiveTab('projects');
               setShowProjects(true);
               setShowMembers(false);
+              setIsMobileMenuOpen(false);
             }}>Projects</p>
             {showProjects && (
               <div className="pl-4 flex flex-col text-[16px] mt-1">
-                <p className={`cursor-pointer hover:underline ${isActive('software')}`} onClick={() => setActiveTab('software')}>Software</p>
-                <p className={`cursor-pointer hover:underline ${isActive('ui')}`} onClick={() => setActiveTab('ui')}>UI/UX</p>
-                <p className={`cursor-pointer hover:underline ${isActive('game')}`} onClick={() => setActiveTab('game')}>Game</p>
-                <p className={`cursor-pointer hover:underline ${isActive('arduino')}`} onClick={() => setActiveTab('arduino')}>Arduino</p>
+                {['software', 'ui', 'game', 'arduino'].map((item) => {
+                  const labels = {
+                    software: 'Software',
+                    ui: 'UI/UX',
+                    game: 'Game',
+                    arduino: 'Arduino'
+                  };
+                  return (
+                    <p
+                      key={item}
+                      className={`cursor-pointer hover:underline ${isActive(item)}`}
+                      onClick={() => {
+                        setActiveTab(item);
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      {labels[item]}
+                    </p>
+                  );
+                })}
+
               </div>
             )}
           </div>
@@ -48,26 +82,30 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
               setActiveTab('members');
               setShowProjects(false);
               setShowMembers(true);
+              setIsMobileMenuOpen(false);
             }}>Members</p>
             {showMembers && (
               <div className="pl-4 flex flex-col text-[16px] mt-1">
-                <p className={`cursor-pointer hover:underline ${isActive('giuliani')}`} onClick={() => setActiveTab('giuliani')}>Giuliani</p>
-                <p className={`cursor-pointer hover:underline ${isActive('meg')}`} onClick={() => setActiveTab('meg')}>Meg</p>
-                <p className={`cursor-pointer hover:underline ${isActive('shanley')}`} onClick={() => setActiveTab('shanley')}>Shanley</p>
-                <p className={`cursor-pointer hover:underline ${isActive('pamela')}`} onClick={() => setActiveTab('pamela')}>Pamela</p>
-                <p className={`cursor-pointer hover:underline ${isActive('kate')}`} onClick={() => setActiveTab('kate')}>Kate</p>
+                {['giuliani', 'meg', 'shanley', 'pamela', 'kate'].map((member) => (
+                  <p key={member} className={`cursor-pointer hover:underline ${isActive(member)}`} onClick={() => {
+                    setActiveTab(member);
+                    setIsMobileMenuOpen(false);
+                  }}>{member.charAt(0).toUpperCase() + member.slice(1)}</p>
+                ))}
               </div>
             )}
           </div>
 
-          <p className={`cursor-pointer hover:underline ${isActive('contact')}`} onClick={() => setActiveTab('contact')}>Contact</p>
+          <p className={`cursor-pointer hover:underline ${isActive('contact')}`} onClick={() => {
+            setActiveTab('contact');
+            setIsMobileMenuOpen(false);
+          }}>Contact</p>
         </nav>
       </div>
 
       {/* Main Content */}
-        <div className="flex-1 pl-6">
-          {children}
-        </div>
+      <div className="flex-1 px-4 md:pl-6 pt-4 md:pt-0">
+        {children}
       </div>
     </div>
   );

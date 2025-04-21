@@ -67,7 +67,7 @@ const About = () => {
                 alt="The Script Team on April 3, 2025" 
                 className="w-full h-full object-contain"
               />
-              <p className="text-[13px] text-black/70 leading-tight italic">
+              <p className="text-[13px] text-black/70 italic">
                 <strong>Figure 2:</strong> APR 3 2025, US
               </p>
             </div>
