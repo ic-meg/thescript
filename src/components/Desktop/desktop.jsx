@@ -8,6 +8,8 @@ import DesktopIcon from './DesktopIcon';
 import WindowApp from './WindowApp';
 
 import theScriptIcon from '../../assets/icons/shortcut.png';
+import directory from '../../assets/icons/directory.ico';
+
 import ScriptWindow from './ScriptWindow';
 import WelcomePopup from './WelcomePopUp';
 
@@ -87,7 +89,7 @@ const Desktop = () => {
     {
       id: 'calais',
       title: 'Giuliani',
-      icon:  theScriptIcon,
+      icon:  directory,
       isOpen: false,
       isMinimized: false,
       component: <Giuliani />
@@ -95,7 +97,7 @@ const Desktop = () => {
     {
       id: 'fabian',
       title: 'Meg',
-      icon:  theScriptIcon,
+      icon:  directory,
       isOpen: false,
       isMinimized: false,
       component: <Meg />
@@ -103,7 +105,7 @@ const Desktop = () => {
     {
       id: 'galo',
       title: 'Shanley',
-      icon:  theScriptIcon,
+      icon:  directory,
       isOpen: false,
       isMinimized: false,
       component: <Ley />
@@ -111,7 +113,7 @@ const Desktop = () => {
     {
       id: 'murillo',
       title: 'Pamela',
-      icon:  theScriptIcon,
+      icon:  directory,
       isOpen: false,
       isMinimized: false, 
       component: <Pam />
@@ -119,7 +121,7 @@ const Desktop = () => {
     {
       id: 'serrano',
       title: 'Kate',
-      icon:  theScriptIcon,
+      icon:  directory,
       isOpen: false,
       isMinimized: false,
       component: <Kate />
@@ -184,19 +186,19 @@ const Desktop = () => {
             <DesktopIcon icon={theScriptIcon} label="The <Script>" />
           </div>
           <div onClick={() => handleAppClick('calais')}>
-            <DesktopIcon icon={theScriptIcon} label="Calais" />
+            <DesktopIcon icon={directory} label="Calais" />
           </div>
           <div onClick={() => handleAppClick('fabian')}>
-            <DesktopIcon icon={theScriptIcon} label="Fabian" />
+            <DesktopIcon icon={directory} label="Fabian" />
           </div>
           <div onClick={() => handleAppClick('galo')}>
-            <DesktopIcon icon={theScriptIcon} label="Galo" />
+            <DesktopIcon icon={directory} label="Galo" />
           </div>
           <div onClick={() => handleAppClick('murillo')}>
-            <DesktopIcon icon={theScriptIcon} label="Murillo" />
+            <DesktopIcon icon={directory} label="Murillo" />
           </div>
           <div onClick={() => handleAppClick('serrano')}>
-            <DesktopIcon icon={theScriptIcon} label="Serrano" />
+            <DesktopIcon icon={directory} label="Serrano" />
           </div>
         </div>
 
