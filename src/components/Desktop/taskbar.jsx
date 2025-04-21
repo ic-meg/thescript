@@ -56,8 +56,10 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
   return (
     <>
     <audio ref={clickAudioRef} src={clickSound} preload="auto" />
-
-      <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50">
+    {startOpen && (
+        <div className="absolute inset-0 bg-black bg-opacity-20 z-[998]" />
+      )}
+    <div className="absolute bottom-0 left-0 w-full h-[40px] bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50">
         {/* Start button */}
         <div className="flex items-center gap-2 text-sm">
         <button
@@ -128,7 +130,7 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
       {startOpen && (
         <div
           ref={startMenuRef}
-          className="absolute bottom-[40px] left-2 z-40 flex border shadow-lg h-[300px] w-[260px] font-['Courier_New',_monospace]"
+          className="absolute bottom-[40px] left-2 z-[999] flex border shadow-lg h-[300px] w-[260px] font-['Courier_New',_monospace]"
         >
           <div className="bg-[#8F8F8F] w-[40px] flex items-center justify-center">
             <span className="-rotate-90 absolute bottom-[70px] left-[-42px] text-white text-[16px] font-bold whitespace-nowrap leading-none">

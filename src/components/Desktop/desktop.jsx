@@ -11,6 +11,12 @@ import theScriptIcon from '../../assets/icons/shortcut.png';
 import ScriptWindow from './ScriptWindow';
 import WelcomePopup from './WelcomePopUp';
 
+import Giuliani from './Members/Gil';
+import Meg from './Members/Meg';
+import Ley from './Members/Ley';
+import Pam from './Members/Pam';
+import Kate from './Members/Kate';
+
 import { AudioContext } from '../../contexts/AudioContext';
 import desktopMusic from '../../assets/sounds/massobeats.mp3'; 
 
@@ -76,7 +82,48 @@ const Desktop = () => {
       icon: theScriptIcon,
       isOpen: false,
       isMinimized: false,
+      component: <ScriptWindow />
     },
+    {
+      id: 'calais',
+      title: 'Giuliani - Member Profile',
+      icon:  theScriptIcon,
+      isOpen: false,
+      isMinimized: false,
+      component: <Giuliani />
+    },
+    {
+      id: 'fabian',
+      title: 'Meg - Member Profile',
+      icon:  theScriptIcon,
+      isOpen: false,
+      isMinimized: false,
+      component: <Meg />
+    },
+    {
+      id: 'galo',
+      title: 'Shanley - Member Profile',
+      icon:  theScriptIcon,
+      isOpen: false,
+      isMinimized: false,
+      component: <Ley />
+    },
+    {
+      id: 'murillo',
+      title: 'Pamela - Member Profile',
+      icon:  theScriptIcon,
+      isOpen: false,
+      isMinimized: false, 
+      component: <Pam />
+    },
+    {
+      id: 'serrano',
+      title: 'Kate - Member Profile',
+      icon:  theScriptIcon,
+      isOpen: false,
+      isMinimized: false,
+      component: <Kate />
+    }
   ]);
 
   const { playTrack, toggleMute, isMuted, currentTrack } = useContext(AudioContext);
@@ -132,6 +179,21 @@ const Desktop = () => {
           <div onClick={() => handleAppClick('script')}>
             <DesktopIcon icon={theScriptIcon} label="The <Script>" />
           </div>
+          <div onClick={() => handleAppClick('calais')}>
+            <DesktopIcon icon={theScriptIcon} label="Calais" />
+          </div>
+          <div onClick={() => handleAppClick('fabian')}>
+            <DesktopIcon icon={theScriptIcon} label="Fabian" />
+          </div>
+          <div onClick={() => handleAppClick('galo')}>
+            <DesktopIcon icon={theScriptIcon} label="Galo" />
+          </div>
+          <div onClick={() => handleAppClick('murillo')}>
+            <DesktopIcon icon={theScriptIcon} label="Murillo" />
+          </div>
+          <div onClick={() => handleAppClick('serrano')}>
+            <DesktopIcon icon={theScriptIcon} label="Serrano" />
+          </div>
         </div>
 
         {/* Open Application Windows */}
@@ -144,7 +206,7 @@ const Desktop = () => {
               onClose={() => handleClose(app.id)}
               onMinimize={() => handleMinimize(app.id)}
             >
-              <ScriptWindow />
+            {app.component}
             </WindowApp>
           )
         )}

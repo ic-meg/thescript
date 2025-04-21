@@ -8,6 +8,7 @@ const DesktopIcon = ({ icon, label }) => {
         {label}
       </span>
     </div>
+    
   );
 };
 
