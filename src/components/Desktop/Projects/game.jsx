@@ -8,7 +8,7 @@ const Software = () => {
       <div>
         <h1 className="text-[40px] font-black font-courier leading-tight">Console Game</h1>
         <h2 className="text-[20px] font-bold font-courier">Projects</h2>
-        <p className="mt-2 text-[15px] max-w-[700px] text-justify">
+        <p className="mt-2 text-[15px] -[700px] text-justify">
         Below are some of the console game projects our team developed during the last semester as part of our academic coursework.
         </p>
       </div>
@@ -18,7 +18,7 @@ const Software = () => {
     {/* Tic Tac Toe */}
     <div>
         <h3 className="text-[33px] font-black font-vt323 leading-tight">Tic Tac Toe</h3>
-        <p className="text-[15px] max-w-[750px] text-justify mt-2">
+        <p className="text-[15px] -[750px] text-justify mt-2">
           This is a basic two-player game played in the console. The program begins with a welcome message, 
           followed by a brief delay and gameplay instructions. Players then enter their names, and the game starts with a message 
           and good luck wish. Player 1 (X) goes first, followed by Player 2 (O), with a delay between turns. 
@@ -34,7 +34,7 @@ const Software = () => {
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
-          className="border border-black w-full max-w-[850px] shadow-md"
+          className="border border-black w-full -[850px] shadow-md"
         />
 
       <p className="text-sm text-center mt-2">
@@ -54,7 +54,7 @@ const Software = () => {
           </a>
         </li>
       </ul>
-      <p className="text-[15px] max-w-[750px] text-justify mt-6">
+      <p className="text-[15px] -[750px] text-justify mt-6">
         We worked on making the game easy to play but still fun and challenging. We tried to make sure the game was simple while also adding some interesting parts to keep players engaged. Throughout the process, we balanced creativity with logic, refining the gameplay mechanics and interface. 
       </p>
       

@@ -84,21 +84,30 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
 
 
 
-          {/*  Open App Buttons */}
-          {openApps.map((app) => (
+        {/*  Open App Buttons */}
+        {openApps.map((app) => (
+          <div className="relative group">
             <button
               key={app.id}
               onClick={() => onClickApp(app.id)}
-              className={`flex items-center gap-2 h-[24px] px-3 py-[2px] text-sm font-['Courier_New_Custom',_monospace] bg-[#COCOCO] ${
+              className={`flex items-center gap-1 h-[24px] px-2 py-[2px] text-xs font-['Courier_New_Custom',_monospace] bg-[#C0C0C0] max-w-[120px] truncate ${
                 app.isMinimized
                   ? 'shadow-[inset_1px_1px_0px_#ffffff,inset_-1px_-1px_0px_#B0B0B0]' 
                   : 'shadow-[inset_-2px_-2px_1px_#ffffff,inset_2px_2px_1px_black]' 
               }`}
-              
             >
-              <img src={app.icon} alt="App" className="w-[16px] h-[16px]" />
-              <span className="text-[14px] leading-none">{app.title}</span>
+              <img src={app.icon} alt="App" className="w-[14px] h-[14px]" />
+              <span className="truncate">{app.title}</span>
             </button>
+
+           
+            <div className="absolute bottom-[110%] left-0 bg-black text-white text-xs px-2 py-1 rounded hidden group-hover:block z-[1000] whitespace-nowrap">
+              {app.title}
+            </div>
+          </div>
+  
+
+
 
           ))}
         </div>
@@ -119,7 +128,6 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
             </div>
           )}
         </button>
-
         <span className="">{time}</span>
       </div>
 
