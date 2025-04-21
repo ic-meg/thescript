@@ -8,7 +8,7 @@ const Software = () => {
       <div>
         <h1 className="text-[40px] font-black font-courier leading-tight">Console Game</h1>
         <h2 className="text-[20px] font-bold font-courier">Projects</h2>
-        <p className="mt-2 text-[15px] -[700px] text-justify">
+        <p className="mt-2 text-[15px] max-w-[700px] text-justify">
         Below are some of the console game projects our team developed during the last semester as part of our academic coursework.
         </p>
       </div>
@@ -18,13 +18,14 @@ const Software = () => {
     {/* Tic Tac Toe */}
     <div>
         <h3 className="text-[33px] font-black font-vt323 leading-tight">Tic Tac Toe</h3>
-        <p className="text-[15px] -[750px] text-justify mt-2">
-          the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
-          This project was built as part of our Web Systems & Technologies 2 midterm.
-          It's fully inspired by the classic Windows 95 look, and includes animated UI,
-          retro assets, and project windows to simulate an old-school OS.
+        <p className="text-[15px] max-w-[750px] text-justify mt-2">
+          This is a basic two-player game played in the console. The program begins with a welcome message, 
+          followed by a brief delay and gameplay instructions. Players then enter their names, and the game starts with a message 
+          and good luck wish. Player 1 (X) goes first, followed by Player 2 (O), with a delay between turns. 
+          The game continues until one player wins or it's a draw. After the game ends, 
+          the score is shown and players can choose to play again or exit.
           <br /><br />
-          It was built using ReactJS, TailwindCSS, and a lot of pixel-perfect CSS. We started this around early April and developed it collaboratively using GitHub. We focused on making it responsive, modular, and retro-accurate — all for the love of tech and nostalgia!
+          We used the C++ programming language to develop the Tic Tac Toe console game. With C++, we were able to handle user input, display the game board, manage player turns, and implement game logic like checking for a winner or a draw.
         </p>
       </div>
 
@@ -33,17 +34,13 @@ const Software = () => {
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
+          className="border border-black w-full max-w-[850px] shadow-md"
         />
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 9:</em> A screenshot of our team’s online enrollment..
+        <em>Figure 9:</em> A screenshot of our team’s Tic Tac Toe game in the console.
       </p>
       </div>
-      <p className="text-[15px] -[750px] text-justify mt-4">
-        This portfolio represents more than just a class requirement — it reflects our creativity, teamwork, and appreciation for web history. From designing pixel-perfect icons to building reusable components, this site is a passion project that showcases who we are as developers and as a team.
-      </p>
-
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
@@ -57,8 +54,8 @@ const Software = () => {
           </a>
         </li>
       </ul>
-      <p className="text-[15px] -[750px] text-justify mt-6">
-        the&lt;script&gt;.com was a meaningful opportunity for our team to apply everything we've learned — from version control to UI/UX design, and frontend development using modern frameworks. Through collaboration, trial-and-error, and a shared love for nostalgic aesthetics, we brought this digital showcase to life. We hope you enjoy exploring it as much as we enjoyed building it.
+      <p className="text-[15px] max-w-[750px] text-justify mt-6">
+        We worked on making the game easy to play but still fun and challenging. We tried to make sure the game was simple while also adding some interesting parts to keep players engaged. Throughout the process, we balanced creativity with logic, refining the gameplay mechanics and interface. 
       </p>
       
       
