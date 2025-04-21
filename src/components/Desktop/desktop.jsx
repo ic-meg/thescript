@@ -86,7 +86,7 @@ const Desktop = () => {
     },
     {
       id: 'calais',
-      title: 'Giuliani - Member Profile',
+      title: 'Giuliani',
       icon:  theScriptIcon,
       isOpen: false,
       isMinimized: false,
@@ -94,7 +94,7 @@ const Desktop = () => {
     },
     {
       id: 'fabian',
-      title: 'Meg - Member Profile',
+      title: 'Meg',
       icon:  theScriptIcon,
       isOpen: false,
       isMinimized: false,
@@ -102,7 +102,7 @@ const Desktop = () => {
     },
     {
       id: 'galo',
-      title: 'Shanley - Member Profile',
+      title: 'Shanley',
       icon:  theScriptIcon,
       isOpen: false,
       isMinimized: false,
@@ -110,7 +110,7 @@ const Desktop = () => {
     },
     {
       id: 'murillo',
-      title: 'Pamela - Member Profile',
+      title: 'Pamela',
       icon:  theScriptIcon,
       isOpen: false,
       isMinimized: false, 
@@ -118,7 +118,7 @@ const Desktop = () => {
     },
     {
       id: 'serrano',
-      title: 'Kate - Member Profile',
+      title: 'Kate',
       icon:  theScriptIcon,
       isOpen: false,
       isMinimized: false,
@@ -175,7 +175,11 @@ const Desktop = () => {
         />
 
         {/* Desktop Icons */}
-        <div className="absolute top-2 left-2 flex flex-col gap-3 z-10">
+        <div className="absolute z-10 
+            grid grid-cols-3 gap-4 p-4 
+            top-2 left-2 
+            sm:flex sm:flex-col sm:gap-3 sm:top-2 sm:left-2 sm:right-auto sm:bottom-auto sm:p-0
+          ">
           <div onClick={() => handleAppClick('script')}>
             <DesktopIcon icon={theScriptIcon} label="The <Script>" />
           </div>
