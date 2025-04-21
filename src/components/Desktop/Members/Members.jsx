@@ -4,7 +4,7 @@ import './Showcase2025.css';
 const Members = () => {
     return (
         <div className="space-y-4 pb-20">
-            <div className="header">The Script - Showcase 2025</div>
+          
 
             <div className="main-content flex-1">
                 <div className="intro mb-4">
@@ -30,7 +30,7 @@ const Members = () => {
                     
                 </div>
 
-                {/* Add more profiles here */}
+            {/* Add more profiles here */}
             </div>
             <div class="line">
                 <p>//////////////////////////////////////////////////////////////////////////</p>
@@ -55,7 +55,7 @@ const Members = () => {
                     
 
                     
-            <div className="footer mt-10">© 2025 The Script</div>
+         
         </div>
     );
 };
