@@ -8,7 +8,7 @@ const Software = () => {
       <div>
         <h1 className="text-[40px] font-black font-courier leading-tight">UI/UX</h1>
         <h2 className="text-[20px] font-bold font-courier">Projects</h2>
-        <p className="mt-2 text-[15px] max-w-[700px] text-justify">
+        <p className="mt-2 text-[15px] text-justify">
         Below are some of the UI/UX projects our team designed during the last semester as part of our academic coursework.
         </p>
       </div>
@@ -18,7 +18,7 @@ const Software = () => {
        {/* Espresso Markup Squad */}
        <div>
         <h3 className="text-[33px] font-black font-vt323 leading-tight">Espresso Markup Squad </h3>
-        <p className="text-[15px] max-w-[750px] text-justify mt-2">
+        <p className="text-[15px] -[750px] text-justify mt-2">
           the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
           This project was built as part of our Web Systems & Technologies 2 midterm.
           It's fully inspired by the classic Windows 95 look, and includes animated UI,
@@ -33,14 +33,14 @@ const Software = () => {
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
-          className="border border-black w-full max-w-[850px] shadow-md"
+          className="border border-black w-full -[850px] shadow-md"
         />
 
       <p className="text-sm text-center mt-2">
         <em>Figure 1:</em> A screenshot of our team’s online enrollment..
       </p>
       </div>
-      <p className="text-[15px] max-w-[750px] text-justify mt-4">
+      <p className="text-[15px] -[750px] text-justify mt-4">
         This portfolio represents more than just a class requirement — it reflects our creativity, teamwork, and appreciation for web history. From designing pixel-perfect icons to building reusable components, this site is a passion project that showcases who we are as developers and as a team.
       </p>
 
@@ -57,7 +57,7 @@ const Software = () => {
           </a>
         </li>
       </ul>
-      <p className="text-[15px] max-w-[750px] text-justify mt-6">
+      <p className="text-[15px] -[750px] text-justify mt-6">
         the&lt;script&gt;.com was a meaningful opportunity for our team to apply everything we've learned — from version control to UI/UX design, and frontend development using modern frameworks. Through collaboration, trial-and-error, and a shared love for nostalgic aesthetics, we brought this digital showcase to life. We hope you enjoy exploring it as much as we enjoyed building it.
       </p>
 
@@ -66,7 +66,7 @@ const Software = () => {
        {/* Tiktok Mockup */}
        <div>
         <h3 className="text-[33px] font-black font-vt323 leading-tight">Tiktok Mockup</h3>
-        <p className="text-[15px] max-w-[750px] text-justify mt-2">
+        <p className="text-[15px] -[750px] text-justify mt-2">
           the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
           This project was built as part of our Web Systems & Technologies 2 midterm.
           It's fully inspired by the classic Windows 95 look, and includes animated UI,
@@ -81,14 +81,14 @@ const Software = () => {
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
-          className="border border-black w-full max-w-[850px] shadow-md"
+          className="border border-black w-full -[850px] shadow-md"
         />
 
       <p className="text-sm text-center mt-2">
         <em>Figure 2:</em> A screenshot of our team’s online enrollment..
       </p>
       </div>
-      <p className="text-[15px] max-w-[750px] text-justify mt-4">
+      <p className="text-[15px] -[750px] text-justify mt-4">
         This portfolio represents more than just a class requirement — it reflects our creativity, teamwork, and appreciation for web history. From designing pixel-perfect icons to building reusable components, this site is a passion project that showcases who we are as developers and as a team.
       </p>
 
@@ -105,7 +105,7 @@ const Software = () => {
           </a>
         </li>
       </ul>
-      <p className="text-[15px] max-w-[750px] text-justify mt-6">
+      <p className="text-[15px] -[750px] text-justify mt-6">
         the&lt;script&gt;.com was a meaningful opportunity for our team to apply everything we've learned — from version control to UI/UX design, and frontend development using modern frameworks. Through collaboration, trial-and-error, and a shared love for nostalgic aesthetics, we brought this digital showcase to life. We hope you enjoy exploring it as much as we enjoyed building it.
       </p>
       
@@ -114,7 +114,7 @@ const Software = () => {
        {/* Facebook Mockup */}
        <div>
         <h3 className="text-[33px] font-black font-vt323 leading-tight">Facebook Mockup</h3>
-        <p className="text-[15px] max-w-[750px] text-justify mt-2">
+        <p className="text-[15px] -[750px] text-justify mt-2">
           the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
           This project was built as part of our Web Systems & Technologies 2 midterm.
           It's fully inspired by the classic Windows 95 look, and includes animated UI,
@@ -129,14 +129,14 @@ const Software = () => {
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
-          className="border border-black w-full max-w-[850px] shadow-md"
+          className="border border-black w-full -[850px] shadow-md"
         />
 
       <p className="text-sm text-center mt-2">
         <em>Figure 3:</em> A screenshot of our team’s online enrollment..
       </p>
       </div>
-      <p className="text-[15px] max-w-[750px] text-justify mt-4">
+      <p className="text-[15px] -[750px] text-justify mt-4">
         This portfolio represents more than just a class requirement — it reflects our creativity, teamwork, and appreciation for web history. From designing pixel-perfect icons to building reusable components, this site is a passion project that showcases who we are as developers and as a team.
       </p>
 
@@ -153,7 +153,7 @@ const Software = () => {
           </a>
         </li>
       </ul>
-      <p className="text-[15px] max-w-[750px] text-justify mt-6">
+      <p className="text-[15px] -[750px] text-justify mt-6">
         the&lt;script&gt;.com was a meaningful opportunity for our team to apply everything we've learned — from version control to UI/UX design, and frontend development using modern frameworks. Through collaboration, trial-and-error, and a shared love for nostalgic aesthetics, we brought this digital showcase to life. We hope you enjoy exploring it as much as we enjoyed building it.
       </p>
       
@@ -162,7 +162,7 @@ const Software = () => {
        {/* Baclaran Church Website */}
        <div>
         <h3 className="text-[33px] font-black font-vt323 leading-tight">Church Website</h3>
-        <p className="text-[15px] max-w-[750px] text-justify mt-2">
+        <p className="text-[15px] -[750px] text-justify mt-2">
           the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
           This project was built as part of our Web Systems & Technologies 2 midterm.
           It's fully inspired by the classic Windows 95 look, and includes animated UI,
@@ -177,14 +177,14 @@ const Software = () => {
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
-          className="border border-black w-full max-w-[850px] shadow-md"
+          className="border border-black w-full shadow-md"
         />
 
       <p className="text-sm text-center mt-2">
         <em>Figure 4:</em> A screenshot of our team’s online enrollment..
       </p>
       </div>
-      <p className="text-[15px] max-w-[750px] text-justify mt-4">
+      <p className="text-[15px] text-justify mt-4">
         This portfolio represents more than just a class requirement — it reflects our creativity, teamwork, and appreciation for web history. From designing pixel-perfect icons to building reusable components, this site is a passion project that showcases who we are as developers and as a team.
       </p>
 
@@ -201,7 +201,7 @@ const Software = () => {
           </a>
         </li>
       </ul>
-      <p className="text-[15px] max-w-[750px] text-justify mt-6">
+      <p className="text-[15px] text-justify mt-6">
         the&lt;script&gt;.com was a meaningful opportunity for our team to apply everything we've learned — from version control to UI/UX design, and frontend development using modern frameworks. Through collaboration, trial-and-error, and a shared love for nostalgic aesthetics, we brought this digital showcase to life. We hope you enjoy exploring it as much as we enjoyed building it.
       </p>
       
