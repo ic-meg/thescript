@@ -1,5 +1,5 @@
-import landscapeImage from '../../../assets/images/landscape.jpg';
-
+import aboutUs from '../../../assets/us/landscape.JPG';
+import portrait from '../../../assets/us/portrait.JPG';
 const About = () => {
   return (
     <div className="space-y-4 pb-20 text-justify font-courier">  <br />
@@ -16,9 +16,9 @@ const About = () => {
         </section>
 
         <hr className="border-t border-gray-300 my-6" />
-        <hr className="border-t border-gray-300 my-6" />
+        {/* <hr className="border-t border-gray-300 my-6" /> */}
         
-        <section className="pt-6">
+        <section className="">
           <h3 className="text-xl font-semibold mb-4">About us</h3>
           <p className="text-lg">
             The name <b>"The&lt;Script&gt;"</b> is inspired by the concept of JavaScript, which play a big role in our project. We also added the &lt;script&gt; tag as a symbol of our journey—we are just starting, and we hope it never ends.
@@ -31,7 +31,7 @@ const About = () => {
         <section className="pt-6">
           <div className="bg-gray-200 rounded-lg overflow-hidden">
             <img 
-              src={landscapeImage} 
+              src={aboutUs} 
               alt="The Script Team" 
               className="w-full h-auto object-cover"
             />
@@ -61,16 +61,17 @@ const About = () => {
             </div>
 
             {/* Right: Portrait Image */}
-            <div className="w-full lg:w-[250px] flex flex-col items-center rounded-lg overflow-hidden justify-center">
+            <div className="w-full lg:w-[300px] flex flex-col items-center justify-start  mx-auto text-center p-2 ">
               <img 
-                src={landscapeImage} 
+                src={portrait} 
                 alt="The Script Team on April 3, 2025" 
-                className="w-[250px] h-[550px] object-cover object-center"
+                className="w-full h-full object-contain"
               />
-              <p className="text-sm mt-2 text-center">
-                <strong>Figure 2.</strong> APR 3 2025, US
+              <p className="text-[13px] text-black/70 leading-tight italic">
+                <strong>Figure 2:</strong> APR 3 2025, US
               </p>
             </div>
+
           </div>
         </section>
 

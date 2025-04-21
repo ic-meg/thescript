@@ -1,11 +1,12 @@
-import React from 'react';
+
+import Coffee from '../../../assets/us/coffee.JPG';
 
 const Arduino = () => {
   return (
-    <div className="w-full h-full bg-[#] px-10 py-10 font-courier text-black leading-relaxed">
+    <div className="w-full h-full px-6 py-4 font-courier text-black leading-relaxed">
       {/* Title */}
       <h1 className="text-4xl font-extrabold mb-2">Smart Coffee Machine</h1>
-      <h2 className="text-xl font-bold mb-6">Developed by The &lt;Script&gt; Team</h2>
+      <h2 className="text-xl font-bold mb-6">Developed by The&lt;Script&gt; Team</h2>
 
       {/* Intro Paragraph */}
       <p className="mb-4 text-justify">
@@ -27,12 +28,12 @@ const Arduino = () => {
       {/* Video hereee */}
       <div className="mb-6">
         <img
-          src="/assets/images/smart-coffee-machine.jpg"
+          src={Coffee}
           alt="Smart Coffee Machine Project"
           className="w-full max-w-xl mx-auto rounded shadow"
         />
         <p className="text-sm text-center mt-2">
-          <em>Figure 1:</em> Smart Coffee Machine — Touch UI and hardware setup
+          <em>Figure 1:</em> Our team presenting the Smart Coffee Machine project — UI demo and prototype
         </p>
       </div>
 
@@ -51,9 +52,12 @@ const Arduino = () => {
         </li>
       </ul>
 
-      {/* Closing Note */}
+   
       <p className="mt-8 text-justify">
-        This project is a result of teamwork, creativity, and technical problem-solving. We're currently working on refining its design and functionality — adding features like cup detection, heating elements, and improved UI. Stay tuned for updates as we continue brewing up something awesome.
+      While the journey wasn't easy, our first presentation came with its share of challenges — we struggled to complete the full functionality in time, which took a toll on us both mentally and emotionally. But despite the setbacks, we pulled through. We stayed calm, kept going, and eventually delivered the presentation the way we envisioned it. It may not have been perfect, but it was a success — and a moment we’re proud of.
+      </p>
+      <p className="mt-4 text-justify">
+        We’re especially grateful to our instructors for believing in us and giving us the opportunity to present again. Their understanding and support meant a lot, and it gave us the chance to prove what we were truly capable of.
       </p>
     </div>
   );

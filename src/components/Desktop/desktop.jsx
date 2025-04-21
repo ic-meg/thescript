@@ -23,7 +23,6 @@ const Desktop = () => {
 
   const audioRef = useRef(null);
 
-
   useEffect(() => {
     let lastKeyTime = 0;
     let loopAudio = null;
@@ -73,7 +72,7 @@ const Desktop = () => {
   const [apps, setApps] = useState([
     {
       id: 'script',
-      title: 'The <Script>',
+      title: 'The<Script>',
       icon: theScriptIcon,
       isOpen: false,
       isMinimized: false,

@@ -4,7 +4,7 @@ import SidebarLayout from './SidebarLayout';
 
 import About from './About/About';
 
-import { Projects, Software, Arduino } from './Projects';
+import { Projects, Software, Arduino, UI, Game } from './Projects';
 import { Members, Gil, Meg, Ley, Pam, Kate } from './Members';
 
 import Contact from './Contact/Contact';
@@ -29,7 +29,13 @@ const ScriptWindow = () => {
   
       case 'software':
         return <Software />;
+      
+      case 'ui':
+        return <UI />
   
+      case 'game':
+        return <Game />
+        
       case 'arduino':
         return <Arduino />;
   

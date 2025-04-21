@@ -32,9 +32,10 @@ export const AudioProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    const currentAudio = audioRef.current;
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
+      if (currentAudio) {
+        currentAudio.pause();
       }
     };
   }, []);

@@ -3,18 +3,23 @@ import Draggable from 'react-draggable';
 
 const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
   const [isMinimized, setIsMinimized] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const nodeRef = useRef(null);
 
   if (isMinimized) return null;
 
   return (
-    <Draggable handle=".window-title-bar" nodeRef={nodeRef}>
-        <div
-          ref={nodeRef}
-          className="absolute top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px] border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 font-['Courier_New',_monospace] flex flex-col overflow-hidden"
-        >
-
-
+    <Draggable
+      handle=".window-title-bar, .box"
+      nodeRef={nodeRef}
+      disabled={isFullscreen} 
+    >
+      <div
+        ref={nodeRef}
+        className={`absolute ${isFullscreen ? 'top-0 left-0 w-full h-full' : 'top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px]'}
+          border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 
+          font-['Courier_New',_monospace] flex flex-col overflow-hidden transition-all duration-300`}
+      >
         {/* Title Bar */}
         <div className="window-title-bar flex items-center justify-between bg-[#000080] text-white text-sm px-2 py-1 cursor-move">
           <div className="flex items-center gap-2">
@@ -22,7 +27,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
             <span className="font-bold text-[13px]">{title}</span>
           </div>
           <div className="flex items-center gap-[2px]">
-            {/* Minimize Button */}
+            {/* Minimize */}
             <button
               className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
@@ -35,7 +40,17 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
               _
             </button>
 
-            {/* Close Button */}
+            {/* Fullscreen / Restore */}
+            <button
+              className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
+                        shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
+                        hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
+              onClick={() => setIsFullscreen(prev => !prev)}
+            >
+              {isFullscreen ? '🗗' : '🗖'}
+            </button>
+
+            {/* Close */}
             <button
               className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
@@ -45,9 +60,6 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
               X
             </button>
           </div>
-
-
-
         </div>
 
         {/* Content */}
@@ -55,22 +67,19 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
           {children}
         </div>
 
-
-        <div className="flex items-center justify-between h-[22px] bg-[#E4E4E4] border-t border-gray-500 text-[10px] text-black px-[2px] gap-[2px]">
+        {/* Footer */}
+        <div className="box flex items-center justify-between h-[22px] bg-[#E4E4E4] border-t border-gray-500 text-[10px] text-black px-[2px] gap-[2px]">
           <div className="w-full px-2 py-[2px] border border-gray-400 text-[12px] bg-[#E4E4E4] leading-none">
             © 2025 The&lt;Script&gt;
           </div>
           <div className="flex gap-[2px]">
             <div className="w-[18px] h-[18px] border border-gray-400 bg-[#F0F0F0]" />
             <div className="w-[18px] h-[18px] border border-gray-400 bg-[#F0F0F0]" />
-            
           </div>
-
-          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] text-[12px]  leading-none text-transparent">
-              placeholder
+          <div className="w-full px-2 py-[2px] border border-gray-400 bg-[#E4E4E4] text-[12px] leading-none text-transparent">
+            placeholder
           </div>
         </div>
-
       </div>
     </Draggable>
   );

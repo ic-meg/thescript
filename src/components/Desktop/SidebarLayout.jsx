@@ -5,7 +5,7 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
   const [showMembers, setShowMembers] = useState(false);
 
   useEffect(() => {
-    const showProjectTabs = ['projects', 'software', 'arduino'];
+    const showProjectTabs = ['projects', 'software', 'arduino', 'ui', 'game'];
     const showMemberTabs = ['members', 'giuliani', 'meg', 'shanley', 'pamela', 'kate'];
 
     setShowProjects(showProjectTabs.includes(activeTab));
@@ -36,6 +36,8 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
             {showProjects && (
               <div className="pl-4 flex flex-col text-[16px] mt-1">
                 <p className={`cursor-pointer hover:underline ${isActive('software')}`} onClick={() => setActiveTab('software')}>Software</p>
+                <p className={`cursor-pointer hover:underline ${isActive('ui')}`} onClick={() => setActiveTab('ui')}>UI/UX</p>
+                <p className={`cursor-pointer hover:underline ${isActive('game')}`} onClick={() => setActiveTab('game')}>Game</p>
                 <p className={`cursor-pointer hover:underline ${isActive('arduino')}`} onClick={() => setActiveTab('arduino')}>Arduino</p>
               </div>
             )}
@@ -63,7 +65,7 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
       </div>
 
       {/* Main Content */}
-        <div className="flex-1 pl-6 border-l border-gray-300 pr-8 py-6">
+        <div className="flex-1 pl-6">
           {children}
         </div>
       </div>
