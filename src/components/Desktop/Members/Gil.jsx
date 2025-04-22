@@ -40,6 +40,11 @@ const Gil = () => {
           ]}
           funFact="Beyond coding, I’m probably spiking a volleyball, leveling up in video games, or serving as an altar server and youth facilitator at my church. You might also catch me volunteering at cleanup drives—saving the planet one trash bag at a time! Oh, and if there's coffee involved, consider me fully powered up, probably editing a podcast, video, or film while sipping away like a true caffeine-fueled creative."
           motto="Brb, debugging my own thoughts."
+          socials={{
+            facebook: "https://www.facebook.com/giuliani.calais.7",
+            instagram: "https://www.instagram.com/dyil_cls/",
+            twitter: "https://twitter.com/username"
+          }}
         />
     );
 };

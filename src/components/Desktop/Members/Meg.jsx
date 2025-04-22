@@ -38,6 +38,11 @@ const Meg = () => {
           ]}
           funFact="Beyond coding, I’m usually playing games or watching movies—I don’t always have everything figured out, and most days I just go with the flow. I love hanging out with my friends and having chill chitchats with my Papa and Nanay. Music keeps me going, especially R&B and of course... Jennie! (Who doesn’t wanna rock with Jennie, right?) I just like keeping myself entertained when I’m not lost in code."
           motto="Go with the flow... unless Jennie drops a track — then pause everything"
+          socials={{
+            facebook: "https://www.facebook.com/fabian.meg/",
+            instagram: "https://www.instagram.com/megangelineee/",
+            twitter: "https://x.com/megangelineee"
+          }}
         />
       );
     };

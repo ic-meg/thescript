@@ -1,7 +1,9 @@
-
+import React, { useState } from 'react';
 import Coffee from '../../../assets/us/coffee.JPG';
 
 const Arduino = () => {
+  const [previewImage, setPreviewImage] = useState(null);
+
   return (
     <div className="w-full h-full px-6 py-4 font-courier text-black leading-relaxed">
       {/* Title */}
@@ -25,12 +27,13 @@ const Arduino = () => {
         <li>The drink is dispensed automatically and the system resets</li>
       </ul>
 
-      {/* Video hereee */}
+      {/* Team image hereee */}
       <div className="mb-6">
         <img
           src={Coffee}
           alt="Smart Coffee Machine Project"
-          className="w-full max-w-xl mx-auto rounded shadow"
+          className="w-full max-w-xl mx-auto rounded shadow cursor-pointer"
+          onClick={() => setPreviewImage(Coffee)}
         />
         <p className="text-sm text-center mt-2">
           <em>Figure 1:</em> Our team presenting the Smart Coffee Machine project — UI demo and prototype
@@ -59,6 +62,21 @@ const Arduino = () => {
       <p className="mt-4 text-justify">
         We’re especially grateful to our instructors for believing in us and giving us the opportunity to present again. Their understanding and support meant a lot, and it gave us the chance to prove what we were truly capable of.
       </p>
+      {previewImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[999]">
+          <div
+            className="absolute top-4 right-4 text-white text-xl cursor-pointer"
+            onClick={() => setPreviewImage(null)}
+          >
+            ✕
+          </div>
+          <img 
+            src={previewImage}
+            alt="Preview"
+            className="max-w-full max-h-[90vh] rounded-md border-2 border-white shadow-lg"
+          />
+        </div>
+      )}
     </div>
   );
 };

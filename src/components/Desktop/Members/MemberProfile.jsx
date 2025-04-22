@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './Kate.css';
 import button2 from '../../../assets/icons/BUTTON-2.svg';
+import fbIcon from '../../../assets/icons/facebook.png';
+import twitterIcon from '../../../assets/icons/twitter.png';
+import igIcon from '../../../assets/icons/instagram.png';
 
-const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, funFact, motto }) => {
+const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, funFact, motto, socials}) => {
   const [activeSection, setActiveSection] = useState("tools");
-
+  const [previewImage, setPreviewImage] = useState(null);
   const [profileContent] = useState({
     name,
     title,
@@ -12,15 +15,37 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
     hashtag,
     tools,
   });
-
+  
   return (
     <div className="kate-container font-vt323 text-black p-6 bg-[#f0f0f0]">
+    
+    <div className="flex justify-between items-center mb-4">
       {/* Hashtag */}
-      <p className="text-lg mb-4">{profileContent.hashtag}</p>
+      <p className="text-lg">{profileContent.hashtag}</p>
+
+      {/* Social Links */}
+      <div className="flex gap-2">
+        {socials?.facebook && (
+          <a href={socials.facebook} target="_blank" rel="noopener noreferrer" className="transition hover:brightness-125">
+            <img src={fbIcon} alt="Facebook" className="w-6 h-6" />
+          </a>
+        )}
+        {socials?.instagram && (
+          <a href={socials.instagram} target="_blank" rel="noopener noreferrer" className="transition hover:brightness-125">
+            <img src={igIcon} alt="Instagram" className="w-6 h-6" />
+          </a>
+        )}
+        {socials?.twitter && (
+          <a href={socials.twitter} target="_blank" rel="noopener noreferrer" className="transition hover:brightness-125">
+            <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
+          </a>
+        )}
+      </div>
+    </div>
 
       {/* Profile */}
       <div className="flex items-center gap-6 mb-6">
-        <img src={avatar} alt={`${profileContent.name} Avatar`} className="w-[130px] h-[130px]" />
+        <img src={avatar} alt={`${profileContent.name} Avatar`} className="w-[130px] h-[130px] cursor-pointer"  onClick={() => setPreviewImage(avatar)} />
         <div>
           <h1 className="text-[20px]">{profileContent.name}</h1>
           <p className="text-[20px]">{profileContent.title}</p>
@@ -32,39 +57,39 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
 
       {/* Buttons */}
       <div className="flex">
-  <div className="flex gap-3 my-4">
-    {buttons.map((btn, index) => {
-      
-      const sectionMap = ["tools", "projects", "bio", "motto"];
-      const sectionKey = sectionMap[index];
-      // const isActive = activeSection === sectionKey;
+      <div className="flex gap-3 my-4">
+        {buttons.map((btn, index) => {
+          
+          const sectionMap = ["tools", "projects", "bio", "motto"];
+          const sectionKey = sectionMap[index];
+          // const isActive = activeSection === sectionKey;
 
-      return (
-        <button
-          key={index}
-          className="win95-btn flex justify-center items-center p-1"
-          style={{
-            backgroundColor: activeSection === sectionKey ? '#E4E4E4' : '#C3C3C3',
-          }}
-          onClick={() => setActiveSection(sectionKey)}
-        >
-          <img
-            src={btn.src}
-            alt={btn.alt}
-            className={`${index === 0 ? 'w-[30px] h-[30px]' : 'w-[20px] h-[20px]'}`}
-          />
-        </button>
-      );
-    })}
-  </div>
-</div>
+          return (
+            <button
+              key={index}
+              className="win95-btn flex justify-center items-center p-1"
+              style={{
+                backgroundColor: activeSection === sectionKey ? '#E4E4E4' : '#C3C3C3',
+              }}
+              onClick={() => setActiveSection(sectionKey)}
+            >
+              <img
+                src={btn.src}
+                alt={btn.alt}
+                className={`${index === 0 ? 'w-[30px] h-[30px]' : 'w-[20px] h-[20px]'}`}
+              />
+            </button>
+          );
+        })}
+      </div>
+    </div>
 
 
       {/* Tools Section */}
       {activeSection === "tools" && (
         <>
-          <h2 className="text-[20px] font-bold font-['Courier_New',monospace] underline underline-offset-4 mb-2">
-            {profileContent.name.split(' ')[0]}'s Toolbox
+          <h2 className="text-[20px] font-bold font-['Courier_New',monospace] underline underline-offset-4 mb-2 ">
+            {profileContent.name.split(' ')[0]}'s Tech Toolbox
           </h2>
           <p className="text-[14px] font-['Courier_New',monospace] text-black/70">
             A collection of languages and software {profileContent.name.split(' ')[0]} knows and uses.
@@ -127,7 +152,24 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
           </div>
         </>
       )}
+        {previewImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[999]">
+          <div
+            className="absolute top-4 right-4 text-white text-xl cursor-pointer"
+            onClick={() => setPreviewImage(null)}
+          >
+            ✕
+          </div>
+          <img 
+            src={previewImage}
+            alt="Preview"
+            className="max-w-full max-h-[90vh] rounded-md border-2 border-white shadow-lg"
+          />
+        </div>
+      )}
     </div>
+
+    
   );
 };
 

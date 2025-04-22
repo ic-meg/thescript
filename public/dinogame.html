@@ -2603,7 +2603,47 @@ html[subframe] body {
   </script>
 	  
 
-
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let runner;
+    
+     
+        const initCheck = setInterval(() => {
+          if (window.Runner && Runner.instance_) {
+            runner = Runner.instance_;
+            pressStart();
+            autoLoop();
+            clearInterval(initCheck);
+          }
+        }, 100);
+    
+        
+        function pressStart() {
+          const event = new KeyboardEvent('keydown', {
+            keyCode: 32,
+            which: 32,
+            key: ' ',
+            code: 'Space',
+            bubbles: true,
+          });
+          document.dispatchEvent(event);
+        }
+    
+        // Loop
+        function autoLoop() {
+          const restartCheck = setInterval(() => {
+            if (runner.crashed) {
+              runner.restart();
+            }
+            if (!runner.activated) {
+              pressStart();
+            }
+          }, 1000);
+        }
+      });
+    </script>
+    
+      
 
 </body>
 

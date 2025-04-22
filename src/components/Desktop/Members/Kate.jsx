@@ -36,6 +36,11 @@ const Kate = () => {
       ]}
       funFact="Beyond coding, I enjoy exploring new activities for entertainment—whether it's creating content on TikTok, playing games, or going on early morning rides at dawn. As someone who loves trying out new experiences, I’m always on the lookout for fun and refreshing ways to spend my free time. Additionally, nasa page po ni giul"
       motto="Explore Beyond the Comfort Zone"
+      socials={{
+        facebook: "https://www.facebook.com/kate.serrano.7161",
+        instagram: "https://www.instagram.com/yorsomnium_/",
+        twitter: "https://twitter.com/username"
+      }}
     />
   );
 };

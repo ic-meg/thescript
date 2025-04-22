@@ -38,6 +38,11 @@ const Pam = () => {
           ]}
           funFact="Beyond coding, I’m all about sports—I love playing basketball, volleyball, and billiards. I also enjoy gaming and vibing to music, especially OPM (BINI supremacy!). On Sundays, you’ll probably find me at church recharging my spirit. I’m always up for a nature trip or a random adventure, but I also really value my alone time. Being home by myself lets me do my thing and tidy up in peace. Movie nights and food trips with family and friends are some of my favorite ways to unwind. I also make time for morning jogs—and sometimes in the afternoon too, just to catch that golden hour. There's something about watching the sunrise or sunset that makes me feel totally free and at peace."
           motto="Every line of code is a step in an unwritten journey."
+          socials={{
+            facebook: "https://www.facebook.com/pamelatena18",
+            instagram: "https://www.instagram.com/pamtenasttt___/",
+            twitter: "https://twitter.com/username"
+          }}
         />
     );
 };
