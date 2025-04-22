@@ -1,6 +1,4 @@
 
-
-
 import React from 'react';
 
 import Software from './Software';
@@ -10,6 +8,7 @@ import Game from './game';
 
 import arduinoIcon from '../../../assets/icons/arduino-icon.png';
 import uiIcon from '../../../assets/gif/ux.gif';
+import gamingVideo from '../../../assets/icons/gaming-unscreen.gif';
 
 import gamingVideo from '../../../assets/gif/gaming-unscreen.gif'
 
