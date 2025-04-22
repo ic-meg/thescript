@@ -1,3 +1,6 @@
+
+
+
 import React from 'react';
 
 import Software from './Software';
@@ -6,8 +9,9 @@ import UI from './ui';
 import Game from './game';
 
 import arduinoIcon from '../../../assets/icons/arduino-icon.png';
-import uiIcon from '../../../assets/icons/website.png';
-import gameIcon from '../../../assets/icons/games.png';
+import uiIcon from '../../../assets/gif/ux.gif';
+
+import gamingVideo from '../../../assets/gif/gaming-unscreen.gif'
 
 const Projects = ({ setActiveTab, activeTab }) => {
   return (
@@ -21,7 +25,7 @@ const Projects = ({ setActiveTab, activeTab }) => {
         <>
           <div>
             <br />
-            <h1 className="text-[32px] sm:text-[40px] font-black font-courier">Projects</h1>
+            <h1 className="text-3xl sm:text-[40px] font-black font-vt323">Projects</h1>
           </div>
 
           <p className="text-[15px] leading-relaxed font-courier text-justify">
@@ -67,7 +71,7 @@ const Projects = ({ setActiveTab, activeTab }) => {
               className="border border-black p-4 flex items-center gap-4 hover:brightness-110 cursor-pointer "
             >
               <img
-                src={gameIcon}
+                src={gamingVideo}
                 alt="Game Icon"
                 className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px]"
               />

@@ -5,8 +5,8 @@ const Arduino = () => {
   return (
     <div className="w-full h-full px-6 py-4 font-courier text-black leading-relaxed">
       {/* Title */}
-      <h1 className="text-4xl font-extrabold mb-2">Smart Coffee Machine</h1>
-      <h2 className="text-xl font-bold mb-6">Developed by The&lt;Script&gt; Team</h2>
+      <h1 className="text-5xl font-extrabold mb-2 font-vt323">Smart Coffee Machine</h1>
+      <h2 className="text-xl font-bold mb-6 font-vt323">Developed by The&lt;Script&gt; Team</h2>
 
       {/* Intro Paragraph */}
       <p className="mb-4 text-justify">
@@ -17,7 +17,7 @@ const Arduino = () => {
       </p>
 
       {/*  How It Works */}
-      <h3 className="text-2xl font-bold mt-6 mb-2">How It Works</h3>
+      <h3 className="text-3xl font-bold mt-6 mb-2 font-vt323">How It Works</h3>
       <ul className="list-disc pl-6 mb-6">
         <li>Accepts payment via coin slot or GCash scan</li>
         <li>Users interact with a touchscreen to select coffee options</li>
@@ -38,7 +38,7 @@ const Arduino = () => {
       </div>
 
       {/* Video Demo Links  heree */}
-      <h3 className="text-xl font-bold mt-10 mb-2">Demo Links:</h3>
+      <h3 className="text-3xl font-bold mt-10 mb-2 font-vt323">Demo Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">

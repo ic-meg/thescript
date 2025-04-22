@@ -6,8 +6,8 @@ const Software = () => {
     <div className="w-full h-full text-black font-courier px-6 py-4 space-y-6">
       {/* Title */}
       <div>
-        <h1 className="text-[40px] font-black font-courier leading-tight">UI/UX</h1>
-        <h2 className="text-[20px] font-bold font-courier">Projects</h2>
+        <h1 className="text-6xl font-black font-vt323">UI/UX</h1>
+        <h2 className="text-3xl font-vt323">Projects</h2>
         <p className="mt-2 text-[15px] -[700px] text-justify">
         Below are some of the UI/UX projects our team designed during the last semester as part of our academic coursework.
         </p>

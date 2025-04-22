@@ -42,7 +42,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
 
             {/* Fullscreen / Restore */}
             <button
-              className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
+              className="hidden sm:block bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={() => setIsFullscreen(prev => !prev)}

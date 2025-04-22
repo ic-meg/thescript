@@ -1,7 +1,7 @@
 import React from 'react';
 import MemberProfile from './MemberProfile';
 
-import avatar from '../../../assets/icons/AVATAR-GUIL.svg';
+import avatar from '../../../assets/us/pam-1x1.png';
 import button1 from '../../../assets/icons/button1.png';
 import button2 from '../../../assets/icons/BUTTON-2.svg';
 import button3 from '../../../assets/icons/BUTTON-3.svg';

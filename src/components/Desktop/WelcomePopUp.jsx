@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import Message from '../../assets/icons/message.ico';
 
 const WelcomePopup = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
 
-    const timer = setTimeout(() => {
+    const showTimer = setTimeout(() => {
       setVisible(true);
-    }, 1000);
 
-    return () => clearTimeout(timer);
+      const hideTimer =   setTimeout(() => {
+        setVisible(false); 
+      },
+     3000);
+
+    return () => clearTimeout(hideTimer);
+  }, 1000); 
+    return () => clearTimeout(showTimer);
   }, []);
 
   return (
@@ -22,7 +29,10 @@ const WelcomePopup = () => {
         >
 
         <div className="flex justify-between items-center bg-[#000080] text-white px-2 py-[2px] h-[24px]">
+          <div className="flex items-center gap-2">
+            <img src={Message} alt="icon" className="w-[14px] h-[14px]" />
             <span className="text-xs">Windows Message</span>
+          </div>
             <button 
             className="text-white text-xs" 
             onClick={() => setVisible(false)}
