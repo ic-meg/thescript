@@ -1,4 +1,5 @@
-🖥️ The<Script> Portfolio | 2025 Edition
+# 🖥️ The<Script> Portfolio | 2025 Edition
+
 
 
 Welcome to The<Script> Portfolio, a creative showcase built by a group of aspiring developers from Cavite State University - Imus Campus. This midterm project for Web Systems and Technologies 2 (ITEC 106A) is inspired by the classic Windows 95 interface, designed to represent our skills, projects, and profiles in a nostalgic, yet modern format.
