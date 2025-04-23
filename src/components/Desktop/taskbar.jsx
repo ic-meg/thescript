@@ -146,9 +146,11 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
       {/* Start Menu */}
       {startOpen && (
         <div
-          ref={startMenuRef}
-          className="absolute bottom-[40px] left-2 z-[999] flex border shadow-lg h-[300px] w-[260px] sm:w-[260px] sm:h-[300px] font-['Courier_New',_monospace]"
-        >
+  ref={startMenuRef}
+  className="absolute bottom-[40px] left-2 z-[999] flex border shadow-lg
+             h-[240px] w-[200px] sm:w-[260px] sm:h-[300px] font-['Courier_New',_monospace]"
+>
+
           <div className="bg-[#8F8F8F] w-[40px] flex items-center justify-center">
             <span className="-rotate-90 absolute bottom-[70px] left-[-42px] text-white text-[16px] font-bold whitespace-nowrap leading-none">
               The&lt;Script&gt;
