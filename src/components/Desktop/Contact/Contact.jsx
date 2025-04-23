@@ -54,11 +54,13 @@ const Contact = () => {
         {/* Link */}
         <div className="contact-info-section">
           <p className='text-3xl font-vt323 leading-tight'>Contact Us</p>
-          <p className='text-justify'>
+          <p className="text-justify text-sm sm:text-base leading-relaxed sm:leading-normal px-2 sm:px-0">
             We're here to collaborate and happy to answer any questions.  
-            If you have any opportunities, feel free to contact us — 
-            just fill out the form on the right and we’ll get back to you as soon as we can!
+            If you have any opportunities, feel free to contact us —
+            <span className="hidden sm:inline"> just fill out the form on the right</span>
+            <span className="inline sm:hidden"> just fill out the form below</span>, and we’ll get back to you as soon as we can!
           </p>
+
           <div className="contact-details">
             <div className="contact-item">
               <img src={phoneIcon} alt="Phone" className="contact-icon" />

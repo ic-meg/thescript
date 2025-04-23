@@ -39,10 +39,9 @@
 
 .contact-info-section,
 .contact-form-section {
-  flex: 1 1 100%;
-  min-width: 0;
+    flex: 1;
+    min-width: 300px;
 }
-
 
 .contact-info-section h1 {
     font-size: 24px;
