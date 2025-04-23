@@ -64,14 +64,14 @@ const Software = () => {
 
       {/* Online Exam */}
       <div>
-        <h3 className="text-[33px] font-black font-vt323 leading-tight">Integrated Online Admission and Proctored Examination System</h3>
+        <h3 className="text-[33px] font-black font-vt323 leading-tight">Integrated Online Admission and Examination System</h3>
         <p className="text-[15px] -[750px] text-justify mt-2">
           This is a system that helps schools or colleges manage student admissions and exams online. 
-          It allows students to apply, take entrance exams, and be monitored (proctored) during the test to make sure 
+          It allows students to apply, take entrance exams, and be monitored during the test to make sure 
           they are not cheating—all using a computer or mobile device. Everything is done in one platform to make the process 
           easy and secure.
           <br /><br />
-          The Integrated Online Admission and Proctored Examination System was built using PHP, HTML, CSS, and SQL. It handles everything from student registration to secure online exams, all in one platform.
+          The Integrated Online Admission and  Examination System was built using PHP, HTML, CSS, and SQL. It handles everything from student registration to secure online exams, all in one platform.
         </p>
       </div>
 
