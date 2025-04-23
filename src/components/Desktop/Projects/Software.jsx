@@ -1,6 +1,9 @@
 import React from 'react';
 import softwareScreenshot from '../../../assets/images/landscape.jpg'; 
 
+import TeaSpillersPreview from '../../../assets/vids/TeaSpillersPreview.mp4'
+import AdmissionPreview from '../../../assets/vids/AdmissionPreview.mp4'
+
 const Software = () => {
   return (
     <div className="w-full h-full text-black font-courier px-6 py-4 space-y-6">
@@ -62,47 +65,7 @@ const Software = () => {
       </p>
       <br />
 
-      {/* Online Exam */}
-      <div>
-        <h3 className="text-[33px] font-black font-vt323 leading-tight">Integrated Online Admission and Examination System</h3>
-        <p className="text-[15px] -[750px] text-justify mt-2">
-          This is a system that helps schools or colleges manage student admissions and exams online. 
-          It allows students to apply, take entrance exams, and be monitored during the test to make sure 
-          they are not cheating—all using a computer or mobile device. Everything is done in one platform to make the process 
-          easy and secure.
-          <br /><br />
-          The Integrated Online Admission and  Examination System was built using PHP, HTML, CSS, and SQL. It handles everything from student registration to secure online exams, all in one platform.
-        </p>
-      </div>
-
-      {/* Image */}
-      <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
-
-      <p className="text-sm text-center mt-2">
-        <em>Figure 2:</em> A screenshot of our team’s Online Exam system.
-      </p>
-      </div>
-      <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
-      <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
-          </a>
-        </li>
-      </ul>
-      <p className="text-[15px] -[750px] text-justify mt-6">
-        This project is more than just a school project — it shows our creativity, teamwork, and love for building smart web solutions. By designing a smooth online admission and exam system, we combined useful features with strong security. From user-friendly design to reliable proctoring tools, this system shows who we are as developers and how well we work together as a team.
-      </p>
+    
 
       {/* Tea Spillers */}
       <div>
@@ -118,6 +81,54 @@ const Software = () => {
 
       {/* Image */}
       <div>
+        <div className="flex justify-center items-center w-full my-4">
+          <video 
+            src={TeaSpillersPreview} 
+            muted 
+            autoPlay 
+            loop 
+            className="border border-black w-full max-w-[850px] shadow-md"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+
+      <p className="text-sm text-center mt-2">
+        <em>Figure 2:</em> A preview of our team’s Tea Spillers.
+      </p>
+      </div>
+      <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
+      <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
+        <li>
+          <a href= "https://youtu.be/sIdmq6asZuw" target="_blank" rel="noopener noreferrer">
+            [Youtube] – Demo Link
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/ic-meg/Tea-Spillers---Billing-System" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – Tea Spillers Repository
+          </a>
+        </li>
+      </ul>
+      <p className="text-[15px] -[750px] text-justify mt-6">
+        While it’s not super advanced, it shows how even small systems can help make everyday tasks like ordering and billing easier and more organized.
+      </p>
+           
+       {/* ATM Machine (Java GUI)*/}
+       <div>
+        <h3 className="text-[33px] font-black font-vt323 leading-tight">Java - ATM System</h3>
+        <p className="text-[15px] -[750px] text-justify mt-2">
+          The ATM system is a self-service machine that allows people to do different banking tasks 
+          like withdrawing cash, depositing money, checking account balances, transferring money, and paying bills, 
+          all without needing to talk to a bank teller. 
+          <br /><br />
+          This system is built using the Java programming language, which makes it secure and reliable. Java helps the ATM handle many transactions safely, with features like data protection and PIN verification to keep everything secure. 
+        </p>
+      </div>
+
+      {/* Image */}
+      <div>
         <img
           src={softwareScreenshot}
           alt="Software Project Screenshot"
@@ -125,7 +136,7 @@ const Software = () => {
         />
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 3:</em> A screenshot of our team’s Tea Spillers.
+        <em>Figure 3:</em> A screenshot of our team’s ATM System.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
@@ -142,9 +153,57 @@ const Software = () => {
         </li>
       </ul>
       <p className="text-[15px] -[750px] text-justify mt-6">
-        While it’s not super advanced, it shows how even small systems can help make everyday tasks like ordering and billing easier and more organized.
+        The ATM System project was an exciting chance for our team to put all our skills to the test, from coding with Java to designing secure and user-friendly interfaces. 
       </p>
+      
+    {/* Online Exam */}
+    <div>
+          <h3 className="text-[33px] font-black font-vt323 leading-tight">Integrated Online Admission and Examination System</h3>
+          <p className="text-[15px] -[750px] text-justify mt-2">
+            This is a system that helps schools or colleges manage student admissions and exams online. 
+            It allows students to apply, take entrance exams, and be monitored during the test to make sure 
+            they are not cheating—all using a computer or mobile device. Everything is done in one platform to make the process 
+            easy and secure.
+            <br /><br />
+            The Integrated Online Admission and  Examination System was built using PHP, HTML, CSS, and SQL. It handles everything from student registration to secure online exams, all in one platform.
+          </p>
+        </div>
 
+        {/* Image */}
+        <div>
+          <div className="flex justify-center items-center w-full my-4">
+              <video 
+                src={AdmissionPreview} 
+                muted 
+                autoPlay 
+                loop 
+                className="border border-black w-full max-w-[850px] shadow-md"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+
+        <p className="text-sm text-center mt-2">
+          <em>Figure 2:</em> A preview of our team’s Admission and Online Exam system.
+        </p>
+        </div>
+        <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
+        <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
+          <li>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+              [OS Site] – The&lt;Script&gt;.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+              [Github Repository] – The&lt;Script&gt; Repository
+            </a>
+          </li>
+        </ul>
+        <p className="text-[15px] -[750px] text-justify mt-6">
+          This project is more than just a school project — it shows our creativity, teamwork, and love for building smart web solutions. By designing a smooth online admission and exam system, we combined useful features with strong security. From user-friendly design to reliable proctoring tools, this system shows who we are as developers and how well we work together as a team.
+        </p>
 
        {/* Online enrollment */}
        <div>
@@ -188,48 +247,7 @@ const Software = () => {
       </p>
 
 
-            
-       {/* ATM Machine (Java GUI)*/}
-       <div>
-        <h3 className="text-[33px] font-black font-vt323 leading-tight">Java - ATM System</h3>
-        <p className="text-[15px] -[750px] text-justify mt-2">
-          The ATM system is a self-service machine that allows people to do different banking tasks 
-          like withdrawing cash, depositing money, checking account balances, transferring money, and paying bills, 
-          all without needing to talk to a bank teller. 
-          <br /><br />
-          This system is built using the Java programming language, which makes it secure and reliable. Java helps the ATM handle many transactions safely, with features like data protection and PIN verification to keep everything secure. 
-        </p>
-      </div>
-
-      {/* Image */}
-      <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
-
-      <p className="text-sm text-center mt-2">
-        <em>Figure 5:</em> A screenshot of our team’s ATM System.
-      </p>
-      </div>
-      <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
-      <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
-          </a>
-        </li>
-      </ul>
-      <p className="text-[15px] -[750px] text-justify mt-6">
-        The ATM System project was an exciting chance for our team to put all our skills to the test, from coding with Java to designing secure and user-friendly interfaces. 
-      </p>
-      
+ 
 
       
       
