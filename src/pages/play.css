@@ -7,7 +7,7 @@ html, body {
   
 .play-screen {
     @apply h-screen w-screen overflow-hidden bg-[radial-gradient(circle,_#000000_0%,_#3533CD_100%)] flex items-center justify-center font-mono text-center;
-    font-family: 'Monospace Custom', monospace;
+    font-family: 'Courier New Custom', monospace;
   }
   
   .vinyl-wrapper {

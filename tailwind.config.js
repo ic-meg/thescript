@@ -6,7 +6,6 @@ export const theme = {
     fontFamily: {
       vt323: ['VT323 Custom', 'monospace'],
       courier: ['Courier New Custom', 'monospace'],
-      mono: ['Monospace Custom', 'monospace']
     }
   }
 };
