@@ -71,15 +71,17 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
             }
             setStartOpen(prev => !prev);
           }}
-          className={`flex items-center gap-2 px-2 py-[2px] text-black bg-[#E4E4E4] border 
+          className={`flex items-center gap-1 sm:gap-2 px-2 py-[3px] text-black bg-[#E4E4E4] border min-w-[70px] max-w-[90px]
+            text-[12px] sm:text-[14px] overflow-hidden whitespace-nowrap
             ${startOpen
-              ? 'shadow-[inset_4px_4px_0_#7E7E7E,inset_-4px_-4px_0_#B1B1B1,inset_2px_2px_0_#262626,inset_-2px_-2px_0_#F0F0F0]'
+              ? 'shadow-[inset_3px_3px_0_#7E7E7E,inset_-3px_-3px_0_#B1B1B1]'
               : 'shadow-[inset_2px_2px_1px_#ffffff,inset_-2px_-2px_1px_#8b8b8b]'
             }`}
         >
-        <img src={appIcon} alt="App Icon" className="w-4 h-4 sm:w-4 sm:h-4" />
-        <span className="text-[15px] sm:text-[15px]">Start</span>
+          <img src={appIcon} alt="App Icon" className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="truncate font-vt323">Start</span>
         </button>
+
 
 
        
@@ -120,8 +122,9 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
 
        
       {/*  Clock and volume */}
-      <div className="flex-shrink-0 min-w-fit flex items-center gap-2 px-2 h-[32px] bg-[#E4E4E4]
-      shadow-[inset_-2px_-2px_0_#F0F0F0,inset_2px_2px_0_#7E7E7E] text-[14px]">
+      <div className="ml-auto flex items-center gap-2 px-2 h-[32px] bg-[#E4E4E4] 
+  shadow-[inset_-2px_-2px_0_#F0F0F0,inset_2px_2px_0_#7E7E7E] 
+  text-[12px] sm:text-[14px] min-w-[70px] sm:min-w-[90px] max-w-[30vw] truncate">
 
 
         <button
@@ -129,7 +132,7 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
           className="relative w-[18px] h-[18px] flex items-center justify-center cursor-pointer hover:brightness-110"
           title={isMuted ? "Unmute" : "Mute"}
         >
-          <img src={volumeIcon} alt="Volume Icon" className="w-[14px] h-[14px]" />
+        <img src={volumeIcon} alt="Volume Icon" className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px]" />
           
           {isMuted && (
             <div className="absolute w-[16px] h-[16px] flex items-center justify-center">
@@ -137,7 +140,7 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
             </div>
           )}
         </button>
-        <span className="">{time}</span>
+        <span className="truncate">{time}</span>
       </div>
 
 
