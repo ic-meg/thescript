@@ -53,7 +53,8 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
 
       {/* Buttons */}
       <div className="flex">
-      <div className="flex gap-3 my-4">
+      <div className="flex flex-wrap gap-3 my-4 max-w-[280px] sm:max-w-full mx-auto sm:mx-0 justify-center sm:justify-start">
+
         {buttons.map((btn, index) => {
           
           const sectionMap = ["tools", "projects", "bio", "motto"];
