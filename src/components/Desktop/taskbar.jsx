@@ -146,10 +146,10 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
       {/* Start Menu */}
       {startOpen && (
         <div
-  ref={startMenuRef}
-  className="absolute bottom-[40px] left-2 z-[999] flex border shadow-lg
-             h-[240px] w-[200px] sm:w-[260px] sm:h-[300px] font-['Courier_New',_monospace]"
->
+          ref={startMenuRef}
+          className="absolute bottom-[40px] left-2 z-[999] flex border shadow-lg
+                    h-[150px] w-[150px] sm:w-[260px] sm:h-[300px] font-['Courier_New',_monospace]"
+        >
 
           <div className="bg-[#8F8F8F] w-[40px] flex items-center justify-center">
             <span className="-rotate-90 absolute bottom-[70px] left-[-42px] text-white text-[16px] font-bold whitespace-nowrap leading-none">
@@ -183,7 +183,8 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
             >
 
               <img src={shutdownIcon} alt="Shutdown" className="w-[18px] h-[16px]" />
-              <span className="text-[14px] text-black">Shut down...</span>
+              <span className="text-[10px] sm:text-[14px] text-black">Shut down...</span>
+
             </div>
           </div>
         </div>
