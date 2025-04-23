@@ -1,10 +1,5 @@
 
 @font-face {
-    font-family: 'Monospace Custom';
-    src: url('./assets/fonts/Logic-Font-family/logicmonospacetrial-regular.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'Courier New Custom';
     src: url('./assets/fonts/courier-new/cour.ttf') format('truetype');
     font-weight: normal;
