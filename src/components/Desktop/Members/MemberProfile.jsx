@@ -42,13 +42,14 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
       {/* Profile */}
       <div className="flex items-center gap-6 mb-6">
         <img src={avatar} alt={`${profileContent.name} Avatar`} className="w-[130px] h-[130px] cursor-pointer"  onClick={() => setPreviewImage(avatar)} />
-        <div>
-          <h1 className="text-[20px]">{profileContent.name}</h1>
-          <p className="text-[20px]">{profileContent.title}</p>
-          <a href={`mailto:${profileContent.email}`} className="text-[16px] underline">
+        <div className="min-w-0 break-words max-w-[240px] sm:max-w-full">
+          <h1 className="text-[18px] sm:text-[20px] break-words">{profileContent.name}</h1>
+          <p className="text-[16px] sm:text-[20px] break-words">{profileContent.title}</p>
+          <a href={`mailto:${profileContent.email}`} className="text-[14px] sm:text-[16px] underline break-words">
             {profileContent.email}
           </a>
         </div>
+
       </div>
 
       {/* Buttons */}
@@ -92,7 +93,7 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
             A collection of languages and software {profileContent.name.split(' ')[0]} knows and uses.
           </p>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-10 gap-y-8 mt-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-6 mt-6">
             {profileContent.tools.map((tool, index) => (
               <div key={index} className="flex items-center gap-3">
                 <img src={tool.src} alt={tool.label} className="w-10 h-10" />
