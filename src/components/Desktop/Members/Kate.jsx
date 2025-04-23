@@ -39,7 +39,7 @@ const Kate = () => {
       socials={{
         facebook: "https://www.facebook.com/kate.serrano.7161",
         instagram: "https://www.instagram.com/yorsomnium_/",
-        twitter: "https://twitter.com/username"
+      
       }}
     />
   );

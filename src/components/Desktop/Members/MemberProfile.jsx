@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Kate.css';
 import button2 from '../../../assets/icons/BUTTON-2.svg';
 import fbIcon from '../../../assets/icons/facebook.png';
-import twitterIcon from '../../../assets/icons/twitter.png';
+// import twitterIcon from '../../../assets/icons/twitter.png';
 import igIcon from '../../../assets/icons/instagram.png';
 
 const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, funFact, motto, socials}) => {
@@ -35,11 +35,7 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
             <img src={igIcon} alt="Instagram" className="w-6 h-6" />
           </a>
         )}
-        {socials?.twitter && (
-          <a href={socials.twitter} target="_blank" rel="noopener noreferrer" className="transition hover:brightness-125">
-            <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
-          </a>
-        )}
+
       </div>
     </div>
 

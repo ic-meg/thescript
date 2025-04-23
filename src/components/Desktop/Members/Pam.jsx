@@ -41,7 +41,7 @@ const Pam = () => {
           socials={{
             facebook: "https://www.facebook.com/pamelatena18",
             instagram: "https://www.instagram.com/pamtenasttt___/",
-            twitter: "https://twitter.com/username"
+         
           }}
         />
     );

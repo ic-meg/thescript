@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+
 import './Contact.css';
 import logo from '../../../assets/images/logo.png';
 import phoneIcon from '../../../assets/icons/phone-call-1.png';
@@ -33,6 +34,16 @@ const Contact = () => {
       setIsSubmitting(false);
     });
   };
+  React.useEffect(() => {
+    if (submitStatus === 'success' || submitStatus === 'error') {
+      const timer = setTimeout(() => {
+        setSubmitStatus(null);
+      }, 3000);
+  
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
+  
 
   return (
     <div className="contact-container">
@@ -42,12 +53,12 @@ const Contact = () => {
       <div className="contact-content">
         {/* Link */}
         <div className="contact-info-section">
-          <h1>Contact Us</h1>
-          <p>
-            We're ready to collaborate and answer any questions you may have. 
-            Let's connect — we look forward to working with you!
+          <p className='text-3xl font-vt323 leading-tight'>Contact Us</p>
+          <p className='text-justify'>
+            We're here to collaborate and happy to answer any questions.  
+            If you have any opportunities, feel free to contact us — 
+            just fill out the form on the right and we’ll get back to you as soon as we can!
           </p>
-          
           <div className="contact-details">
             <div className="contact-item">
               <img src={phoneIcon} alt="Phone" className="contact-icon" />
@@ -63,9 +74,9 @@ const Contact = () => {
                 href="https://github.com/ic-meg/our-portfolio" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-blue-500 underline"
+                className="text-purple-500 underline"
               >
-                https://github.com/ic-meg/our-portfolio
+                GitHub Repository
               </a>
             </div>
             <div className="contact-item">
@@ -76,23 +87,63 @@ const Contact = () => {
         </div>
 
         {/* Form */}
-        <div className="contact-form-section">
-          <h2>Send us a message</h2>
-          
-          {submitStatus === 'success' && (
-            <div className="confirmation-message success">
-              Message sent successfully!
+        <div className="text-2xl contact-form-section">
+          <p className='font-vt323 text-2xl'>Send us a message</p>
+
+          {/* Success */}
+          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div
+              className={`transform transition-all duration-500 ease-out pointer-events-auto
+                ${submitStatus === 'success' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
+            >
+              <div className="bg-[#C0C0C0] border border-black shadow-[4px_4px_0px_black] w-[300px]">
+                {/* Top bar */}
+                <div className="flex justify-between items-center bg-[#000080] text-white px-2 py-[2px]">
+                  <span className="text-xs font-bold">Windows Message</span>
+                  <button
+                    onClick={() => setSubmitStatus(null)}
+                    className="text-white text-xs hover:bg-[#808080] px-1"
+                  >
+                    ✕
+                  </button>
+                </div>
+                {/* Body */}
+                <div className="p-4 text-sm text-black font-courier">
+                  ✅ Message sent successfully!
+                </div>
+              </div>
             </div>
-          )}
-          
-          {submitStatus === 'error' && (
-            <div className="confirmation-message error">
-              Failed to send message. Please try again.
+          </div>
+
+          {/* Error */}
+          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div
+              className={`transform transition-all duration-500 ease-out pointer-events-auto
+                ${submitStatus === 'error' ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
+            >
+              <div className="bg-[#F8D7DA] border border-black shadow-[4px_4px_0px_black] w-[300px]">
+                {/* Top bar */}
+                <div className="flex justify-between items-center bg-[#8B0000] text-white px-2 py-[2px]">
+                  <span className="text-xs font-bold">Error</span>
+                  <button
+                    onClick={() => setSubmitStatus(null)}
+                    className="text-white text-xs hover:bg-[#cc0000] px-1"
+                  >
+                    ✕
+                  </button>
+                </div>
+                {/* Body */}
+                <div className="p-4 text-sm text-black font-courier flex items-start gap-2">
+                  <span className="text-red-600 text-lg">❌</span>
+                  <p>Failed to send message. Please try again.</p>
+                </div>
+              </div>
             </div>
-          )}
+          </div>
+
 
           <form ref={form} onSubmit={sendEmail} className="contact-form">
-            <div className="form-group">
+            <div className="form-group text-2xl">
               <label><span className="required-asterisk">*</span>Your Name:</label>
               <input type="text" name="user_name" required />
             </div>
@@ -121,9 +172,11 @@ const Contact = () => {
             </button>
           </form>
           
-          <p className="form-footer">
-            All messages get forwarded straight to our team
+          <p className="form-footer text-sm italic mt-1">
+            All messages get forwarded straight to our team <br />
+            <span className="text-red-500">*</span> = required
           </p>
+    
         </div>
       </div>
     </div>

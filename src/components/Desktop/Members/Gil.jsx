@@ -43,7 +43,7 @@ const Gil = () => {
           socials={{
             facebook: "https://www.facebook.com/giuliani.calais.7",
             instagram: "https://www.instagram.com/dyil_cls/",
-            twitter: "https://twitter.com/username"
+         
           }}
         />
     );

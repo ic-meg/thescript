@@ -40,9 +40,9 @@ const Ley = () => {
           funFact="Beyond coding, I love watching anime and old films or series. I enjoy relaxing and taking my time—doing things that make me feel calm and happy. At home, I’m just a regular daughter who helps with house chores. I also really enjoy spending time with my nieces and nephew. Playing with them always makes me smile. Coding/Studying is my responsibilities, but these little moments are what keep me balanced and happy."
           motto="Code hard, chill harder."
           socials={{
-            facebook: "https://www.facebook.com/shnlygl",
+            facebook: "https://www.facebook.com/shanleygalo0000",
             instagram: "https://www.instagram.com/shan.ley_/",
-            twitter: "https://twitter.com/username"
+          
           }}
           
         />

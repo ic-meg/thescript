@@ -41,7 +41,7 @@ const Meg = () => {
           socials={{
             facebook: "https://www.facebook.com/fabian.meg/",
             instagram: "https://www.instagram.com/megangelineee/",
-            twitter: "https://x.com/megangelineee"
+          
           }}
         />
       );
