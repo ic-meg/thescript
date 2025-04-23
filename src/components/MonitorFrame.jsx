@@ -37,17 +37,12 @@ const MonitorFrame = ({ children }) => {
     <div
       className="w-full min-h-screen flex items-center justify-center"
       style={{
-        ...(isMobile
-          ? {}
-          : {
-              backgroundImage: `url(${beatGif})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }),
+        backgroundImage: `url(${beatGif})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
-
       <div
         className={`relative w-full max-w-[1280px] ${aspect} bg-cover bg-no-repeat`}
         style={{ backgroundImage: `url(${selectedMonitor})` }}

@@ -59,12 +59,14 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
     {startOpen && (
         <div className="absolute inset-0 bg-black bg-opacity-20 z-[998]" />
       )}
-      <div
-        className="absolute bottom-0 left-0 w-full h-[40px] bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50"
-        style={{
-          paddingBottom: 'env(safe-area-inset-bottom)', // makes it safe on iOS
-        }}
-      >
+        <div
+          className="absolute bottom-0 left-0 w-full bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50"
+          style={{
+            height: '48px',
+            paddingBottom: 'env(safe-area-inset-bottom)',
+          }}
+        >
+
     {/* Start button */}
         <div className="flex items-center gap-2 text-sm">
         <button
