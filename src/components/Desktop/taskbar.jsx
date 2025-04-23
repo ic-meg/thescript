@@ -123,8 +123,8 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
        
       {/*  Clock and volume */}
       <div className="ml-auto flex items-center gap-2 px-2 h-[32px] bg-[#E4E4E4] 
-  shadow-[inset_-2px_-2px_0_#F0F0F0,inset_2px_2px_0_#7E7E7E] 
-  text-[12px] sm:text-[14px] min-w-[70px] sm:min-w-[90px] max-w-[30vw] truncate">
+      shadow-[inset_-2px_-2px_0_#F0F0F0,inset_2px_2px_0_#7E7E7E] 
+      text-[12px] sm:text-[14px] min-w-[70px] sm:min-w-[90px] max-w-[30vw] truncate">
 
 
         <button
