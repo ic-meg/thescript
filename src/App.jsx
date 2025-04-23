@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import './tailwind.css';
 import './scrollbar.css';
+import '../src/components/Desktop/desktop.css';
 
 import Start from './pages/startup';
 import Play from './pages/play';

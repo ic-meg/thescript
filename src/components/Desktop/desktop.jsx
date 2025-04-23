@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 
 import MonitorFrame from '../../components/MonitorFrame';
 import desktopBg from '../../assets/images/retroDesktopWallpaper.jpg';
+import portraitBg from '../../assets/images/retroDesktopWallpaper-portrait.jpg';
 
 import Taskbar from './taskbar';
 import DesktopIcon from './DesktopIcon';
@@ -164,6 +165,14 @@ const Desktop = () => {
     );
   };
 
+  /* Mobile Detection */
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <MonitorFrame>
       <audio ref={audioRef} src={clickSound} preload="auto" />
@@ -171,17 +180,20 @@ const Desktop = () => {
 
         {/* Wallpaper Background */}
         <img
-          src={desktopBg}
+          src={isMobile ? portraitBg : desktopBg}
           alt="Desktop Background"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
 
+
         {/* Desktop Icons */}
-        <div className="absolute z-10 
-            grid grid-cols-3 gap-4 p-4 
-            top-2 left-2 
-            sm:flex sm:flex-col sm:gap-3 sm:top-2 sm:left-2 sm:right-auto sm:bottom-auto sm:p-0
-          ">
+        <div className="
+          absolute z-10
+          flex flex-col gap-3 p-4
+          top-2 left-2
+        
+        ">
+
           <div onClick={() => handleAppClick('script')}>
             <DesktopIcon icon={theScriptIcon} label="The <Script>" />
           </div>
