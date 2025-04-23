@@ -1,5 +1,6 @@
 import React from 'react';
-import softwareScreenshot from '../../../assets/images/landscape.jpg'; 
+
+import TicTacToePreview from '../../../assets/vids/TicTacToeDemo.mp4'
 
 const Software = () => {
   return (
@@ -31,26 +32,32 @@ const Software = () => {
 
       {/* Image */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+          <div className="flex justify-center items-center w-full my-4">
+              <video 
+                src={TicTacToePreview} 
+                muted 
+                autoPlay 
+                loop 
+                className="border border-black w-full max-w-[850px] shadow-md"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 9:</em> A screenshot of our team’s Tic Tac Toe game in the console.
+        <em>Figure 9:</em> A preview of our team’s Tic Tac Toe game in the console.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
+          <a href="https://youtu.be/PwxFTVZkZZg" target="_blank" rel="noopener noreferrer">
+            [YouTube] – Tic Tac Toe - Demo
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://github.com/loiverever/TicTacToe" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – Tic Tac Toe - Repository
           </a>
         </li>
       </ul>

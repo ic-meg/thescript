@@ -44,15 +44,11 @@ const Arduino = () => {
       <h3 className="text-3xl font-bold mt-10 mb-2 font-vt323">Demo Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+          <a href="https://youtube.com/shorts/v0H4hzzuDmI" target="_blank" rel="noopener noreferrer">
             VIDEO – Touchscreen Coffee Ordering Walkthrough
           </a>
         </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            VIDEO – GCash + Coin Payment Integration Test
-          </a>
-        </li>
+   
       </ul>
 
    
