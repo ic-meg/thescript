@@ -12,7 +12,8 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
     <Draggable
       handle=".window-title-bar, .box"
       nodeRef={nodeRef}
-       bounds="parent"
+      bounds="parent"
+      cancel=".no-drag" 
     >
       <div
         ref={nodeRef}
@@ -29,7 +30,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
           <div className="flex items-center gap-[2px]">
             {/* Minimize */}
             <button
-              className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
+              className="no-drag bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={() => {
@@ -42,7 +43,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
 
             {/* Fullscreen / Restore */}
             <button
-              className="hidden sm:block bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
+              className="no-drag hidden sm:block bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={() => setIsFullscreen(prev => !prev)}
@@ -52,7 +53,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
 
             {/* Close */}
             <button
-              className="bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
+              className="no-drag bg-gray-300 cursor-pointer text-black w-[22px] h-[20px] text-[13px] border border-black 
                         shadow-[2px_2px_0px_#606060,inset_1px_1px_0px_#fff] 
                         hover:bg-gray-600 hover:text-white hover:shadow-[inset_2px_2px_0px_#222,2px_2px_0px_#606060]"
               onClick={onClose}
