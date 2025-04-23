@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './Kate.css';
-import button2 from '../../../assets/icons/BUTTON-2.svg';
 import fbIcon from '../../../assets/icons/facebook.png';
 // import twitterIcon from '../../../assets/icons/twitter.png';
 import igIcon from '../../../assets/icons/instagram.png';
 
-const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, funFact, motto, socials}) => {
+const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, funFact, motto, socials, projects}) => {
   const [activeSection, setActiveSection] = useState("tools");
   const [previewImage, setPreviewImage] = useState(null);
   const [profileContent] = useState({
@@ -15,6 +14,8 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
     hashtag,
     tools,
   });
+
+
   
   return (
     <div className="kate-container font-vt323 text-black p-6 bg-[#f0f0f0]">
@@ -111,14 +112,10 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
             {profileContent.name.split(' ')[0]}'s Project Archives 
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {[1, 2, 3, 4].map((num) => (
-              <div key={num} className="flex items-center gap-2">
-                <img
-                  src={button2}
-                  alt="Project Folder"
-                  className="w-[30px] h-[30px]"
-                />
-                <span className="text-[16px]">Project 0{num}</span>
+            {projects?.map((project, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <img src={project.icon} alt={project.name} className="w-[30px] h-[30px]" />
+                <span className="text-[16px]">{project.name}</span>
               </div>
             ))}
           </div>

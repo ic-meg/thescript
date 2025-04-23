@@ -15,6 +15,14 @@ import Figma from '../../../assets/icons/FIGMA.svg';
 
 
 const Pam = () => {
+  const pamProjects = [
+    { name: "The Script - Portfolio", icon: button2 },
+    { name: "ATM System - Java", icon: button2 },
+    { name: "Admission and Online Exam System", icon: button2 },
+    { name: "Enrollment System", icon: button2 },
+    { name: "Arduino Smart Coffee Machine", icon: button2 },
+  ];
+
     return (
         <MemberProfile
           name="Pamela T. Murillo"
@@ -41,8 +49,8 @@ const Pam = () => {
           socials={{
             facebook: "https://www.facebook.com/pamelatena18",
             instagram: "https://www.instagram.com/pamtenasttt___/",
-         
           }}
+          projects={pamProjects}
         />
     );
 };

@@ -14,6 +14,16 @@ import SQL from '../../../assets/icons/MYSQL.svg';
 import Figma from '../../../assets/icons/FIGMA.svg';
 
 const Kate = () => {
+  const kateProjects = [
+    { name: "The Script - Portfolio", icon: button2 },
+    { name: "Online Exam System", icon: button2 },
+    { name: "Enrollment System", icon: button2 },
+    { name: "Espresso Markup Squad", icon: button2 },
+    { name: "Tic Tac Toe", icon: button2 },
+    { name: "Arduino Smart Coffee Machine", icon: button2 },
+  ];
+
+
   return (
     <MemberProfile
       name="Kate Serrano"
@@ -34,6 +44,8 @@ const Kate = () => {
         { src: SQL, label: "MySQL" },
         { src: Figma, label: "Figma" },
       ]}
+      projects={kateProjects}
+      
       funFact="Beyond coding, I enjoy exploring new activities for entertainment—whether it's creating content on TikTok, playing games, or going on early morning rides at dawn. As someone who loves trying out new experiences, I’m always on the lookout for fun and refreshing ways to spend my free time. Additionally, nasa page po ni giul"
       motto="Explore Beyond the Comfort Zone"
       socials={{
@@ -41,7 +53,10 @@ const Kate = () => {
         instagram: "https://www.instagram.com/yorsomnium_/",
       
       }}
+     
     />
+
+    
   );
 };
 

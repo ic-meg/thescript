@@ -15,6 +15,19 @@ import Figma from '../../../assets/icons/FIGMA.svg';
 import Blender from '../../../assets/icons/BLENDER.svg';
 
 const Meg = () => {
+
+    const megProjects = [
+      { name: "The Script - Portfolio", icon: button2 },
+      { name: "Tea Spillers", icon: button2 },
+      { name: "ATM System - Java", icon: button2 },
+      { name: "Admission and Online Exam System", icon: button2 },
+      { name: "Enrollment System", icon: button2 },
+      { name: "TikTok Mockup", icon: button2 },
+      { name: "Espresso Markup Squad", icon: button2 },
+      { name: "Tic Tac Toe", icon: button2 },
+      { name: "Arduino Smart Coffee Machine", icon: button2 },
+    ];
+
     return (
         <MemberProfile
           name="Meg Angeline V. Fabian"
@@ -36,6 +49,7 @@ const Meg = () => {
             { src: Figma, label: "Figma" },
             {src: Blender, label: "Blender"}
           ]}
+          
           funFact="Beyond coding, I’m usually playing games or watching movies—I don’t always have everything figured out, and most days I just go with the flow. I love hanging out with my friends and having chill chitchats with my Papa and Nanay. Music keeps me going, especially R&B and of course... Jennie! (Who doesn’t wanna rock with Jennie, right?) I just like keeping myself entertained when I’m not lost in code."
           motto="Go with the flow... unless Jennie drops a track — then pause everything"
           socials={{
@@ -43,6 +57,7 @@ const Meg = () => {
             instagram: "https://www.instagram.com/megangelineee/",
           
           }}
+          projects={megProjects}
         />
       );
     };

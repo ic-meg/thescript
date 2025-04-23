@@ -16,6 +16,15 @@ import Blender from '../../../assets/icons/BLENDER.svg';
 
 
 const Gil = () => {
+
+  const gilProjects = [
+    { name: "The Script - Portfolio", icon: button2 },
+    { name: "Admission and Online Exam System", icon: button2 },
+    { name: "Enrollment System", icon: button2 },
+    { name: "Tic Tac Toe", icon: button2 },
+    { name: "Arduino Smart Coffee Machine", icon: button2 },
+  ];
+
     return (
         <MemberProfile
           name="Giuliani D. Calais"
@@ -43,8 +52,8 @@ const Gil = () => {
           socials={{
             facebook: "https://www.facebook.com/giuliani.calais.7",
             instagram: "https://www.instagram.com/dyil_cls/",
-         
           }}
+          projects={gilProjects}
         />
     );
 };

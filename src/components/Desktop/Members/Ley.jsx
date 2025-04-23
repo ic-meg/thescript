@@ -16,6 +16,18 @@ import Figma from '../../../assets/icons/FIGMA.svg';
 
 
 const Ley = () => {
+
+  const leyProjects = [
+    { name: "The Script - Portfolio", icon: button2 },
+    { name: "ATM System - Java", icon: button2 },
+    { name: "Admission and Online Exam System", icon: button2 },
+    { name: "Enrollment System", icon: button2 },
+    { name: "Facebook Mockup", icon: button2 },
+    { name: "Baclaran Church Website", icon: button2 },
+    { name: "Tic Tac Toe", icon: button2 },
+    { name: "Arduino Smart Coffee Machine", icon: button2 },
+  ];
+
     return (
         <MemberProfile
           name="Shanley Q. Galo"
@@ -35,7 +47,6 @@ const Ley = () => {
             { src: JavaScript, label: "Javascript" },
             { src: SQL, label: "MySQL" },
             { src: Figma, label: "Figma" },
-
           ]}
           funFact="Beyond coding, I love watching anime and old films or series. I enjoy relaxing and taking my time—doing things that make me feel calm and happy. At home, I’m just a regular daughter who helps with house chores. I also really enjoy spending time with my nieces and nephew. Playing with them always makes me smile. Coding/Studying is my responsibilities, but these little moments are what keep me balanced and happy."
           motto="Code hard, chill harder."
@@ -44,7 +55,7 @@ const Ley = () => {
             instagram: "https://www.instagram.com/shan.ley_/",
           
           }}
-          
+          projects={leyProjects}
         />
       );
     };
