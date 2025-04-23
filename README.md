@@ -4,10 +4,10 @@
 
 Welcome to The<Script> Portfolio, a creative showcase built by a group of aspiring developers from Cavite State University - Imus Campus. This midterm project for Web Systems and Technologies 2 (ITEC 106A) is inspired by the classic Windows 95 interface, designed to represent our skills, projects, and profiles in a nostalgic, yet modern format.
 
-🎨 Theme & Concept
+### 🎨 Theme & Concept
 Our portfolio mimics a vintage operating system desktop complete with draggable windows, retro scrollbars, a taskbar, and pixel-style icons. The goal? To stand out — both technically and creatively — while celebrating the retro tech aesthetics we love.
 
-🛠 Tech Stack
+### 🛠 Tech Stack
 ReactJS — Component-based frontend framework
 
 React Router v6 — Page routing/navigation
@@ -20,7 +20,7 @@ Framer Motion — Smooth animations
 
 EmailJS — Contact form email functionality
 
-🧩 Features
+### 🧩 Features
 🧑‍💻 Team Member Profiles – Individual components with bio, skills, and contact info
 
 💾 Projects Window – Categories for Software, Arduino, UI/UX, and Games
