@@ -8,7 +8,7 @@ import shutdownSound from '../../assets/sounds/windows-shutdown.mp3';
 import { AudioContext } from '../../contexts/AudioContext';
 import clickSound from '../../assets/sounds/mouse-click.mp3';
 
-const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) => 
+const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted, isMobile }) => 
   {
   const clickAudioRef = useRef(null);
   const navigate = useNavigate();
@@ -59,13 +59,15 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted }) =>
     {startOpen && (
         <div className="absolute inset-0 bg-black bg-opacity-20 z-[998]" />
       )}
-        <div
-           className="absolute bottom-0 left-0 w-full bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50"
-           style={{
-             height: '48px',
-             paddingBottom: 'env(safe-area-inset-bottom)',
-           }}
-         >
+<div
+  className={`${
+    isMobile ? 'fixed' : 'absolute'
+  } bottom-0 left-0 w-full bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50`}
+  style={{
+    height: '48px',
+    paddingBottom: 'env(safe-area-inset-bottom)',
+  }}
+>
 
 
     {/* Start button */}

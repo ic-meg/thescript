@@ -176,7 +176,8 @@ const Desktop = () => {
   return (
     <MonitorFrame>
       <audio ref={audioRef} src={clickSound} preload="auto" />
-      <div className="relative w-full h-full overflow-hidden crt-grainy">
+      <div className="relative w-full h-full overflow-hidden crt-grainy pb-[48px]">
+
 
         {/* Wallpaper Background */}
         <img
@@ -238,6 +239,7 @@ const Desktop = () => {
           onClickApp={handleAppClick} 
           isMuted={isMuted} 
           toggleMute={toggleMute}
+          isMobile={isMobile}
         />
       </div>
     </MonitorFrame>
