@@ -13,7 +13,8 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitStatus, setSubmitStatus] = React.useState(null);
 
-  const sendEmail = (e) => {
+ // handles sending email through EmailJS
+  const sendEmail = (e) => { 
     e.preventDefault();
     setIsSubmitting(true);
 

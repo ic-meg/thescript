@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+
 import './Kate.css';
 import fbIcon from '../../../assets/icons/facebook.png';
-// import twitterIcon from '../../../assets/icons/twitter.png';
 import igIcon from '../../../assets/icons/instagram.png';
 
 const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, funFact, motto, socials, projects}) => {
   const [activeSection, setActiveSection] = useState("tools");
   const [previewImage, setPreviewImage] = useState(null);
+  
+  // store main profile content
   const [profileContent] = useState({
     name,
     title,
@@ -16,7 +18,6 @@ const MemberProfile = ({ name, title, email, avatar, buttons, tools, hashtag, fu
   });
 
 
-  
   return (
     <div className="kate-container font-vt323 text-black p-6 bg-[#f0f0f0]">
     

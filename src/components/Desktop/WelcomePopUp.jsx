@@ -5,7 +5,6 @@ const WelcomePopup = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-
     const showTimer = setTimeout(() => {
       setVisible(true);
 
@@ -14,10 +13,10 @@ const WelcomePopup = () => {
       },
      3000);
 
-    return () => clearTimeout(hideTimer);
-  }, 1000); 
-    return () => clearTimeout(showTimer);
-  }, []);
+      return () => clearTimeout(hideTimer);
+    }, 1000); 
+      return () => clearTimeout(showTimer);
+    }, []);
 
   return (
         <div

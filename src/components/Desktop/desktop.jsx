@@ -21,7 +21,7 @@ import Pam from './Members/Pam';
 import Kate from './Members/Kate';
 
 import { AudioContext } from '../../contexts/AudioContext';
-import desktopMusic from '../../assets/sounds/massobeats.mp3'; 
+import desktopMusic from '../../assets/sounds/bgmusic.MP3'; 
 
 import clickSound from '../../assets/sounds/mouse-click.mp3';
 import keySingle from '../../assets/sounds/key-single.MP3';
@@ -78,6 +78,7 @@ const Desktop = () => {
     return () => window.removeEventListener('click', handleClick);
   }, []);
 
+   //List of the app 
   const [apps, setApps] = useState([
     {
       id: 'script',
@@ -192,7 +193,6 @@ const Desktop = () => {
           absolute z-10
           flex flex-col gap-3 p-4
           top-2 left-2
-        
         ">
 
           <div onClick={() => handleAppClick('script')}>

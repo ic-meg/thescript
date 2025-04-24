@@ -20,7 +20,7 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
   return (
     <div className="w-full font-courier text-black flex flex-col md:flex-row">
 
-      {/*  Hamburger */}
+      {/*  Hamburger  if mobile */}
       <div className="md:hidden px-4 py-3 flex justify-between items-center border-b border-gray-300">
         <div className="font-bold text-[18px]">The&lt;Script&gt;</div>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

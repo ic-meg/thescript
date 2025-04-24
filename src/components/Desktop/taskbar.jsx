@@ -59,16 +59,16 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted, isMobile }) =
     {startOpen && (
         <div className="absolute inset-0 bg-black bg-opacity-20 z-[998]" />
       )}
-<div
-  className={`${
-    isMobile ? 'fixed' : 'absolute'
-  } bottom-0 left-0 w-full bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50`}
-  style={{
-    height: '48px',
-    paddingBottom: 'env(safe-area-inset-bottom)',
-  }}
->
 
+    <div
+      className={`${
+        isMobile ? 'fixed' : 'absolute'
+          } bottom-0 left-0 w-full bg-[#E4E4E4] border-t flex items-center justify-between px-2 font-['Courier_New',_monospace] text-black z-50`}
+          style={{
+            height: '48px',
+            paddingBottom: 'env(safe-area-inset-bottom)',
+          }}
+        >
 
     {/* Start button */}
         <div className="flex items-center gap-2 text-sm">
@@ -187,9 +187,6 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted, isMobile }) =
                   navigate('/shutdown');
                 });
               }}
-
-             
-            
               className="border-t border-gray-400 pt-2 flex items-center gap-2 cursor-pointer"
             >
 

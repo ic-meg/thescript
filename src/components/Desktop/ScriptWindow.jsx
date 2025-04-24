@@ -10,7 +10,7 @@ import { Members, Gil, Meg, Ley, Pam, Kate } from './Members';
 import Contact from './Contact/Contact';
 import Home from './home';
 
-
+//Tracks which is the active tab and returns it, control the sidebar expanded 
 const ScriptWindow = () => {
   const [activeTab, setActiveTab] = useState('home');
   const [sidebarState, setSidebarState] = useState({

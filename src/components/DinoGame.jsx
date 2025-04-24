@@ -1,3 +1,5 @@
+
+//Component that displays the Dino Game
 const DinoGame = () => {
   return (
     <iframe

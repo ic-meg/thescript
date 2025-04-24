@@ -1,4 +1,6 @@
+//container for the monitor screen
 import React, { useEffect, useState } from 'react';
+
 import monitorLandscape from '../assets/images/apple.png';
 import monitorPortrait from '../assets/images/portrait-apple.png';
 import beatGif from '../assets/images/beat.gif';
@@ -7,6 +9,7 @@ const MonitorFrame = ({ children }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
+    // update layout on resize
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -15,20 +18,23 @@ const MonitorFrame = ({ children }) => {
   const selectedMonitor = isMobile ? monitorPortrait : monitorLandscape;
 
   const cutoutStyle = isMobile
-    ? {
-        top: '0.5%',
-        left: '1.5%',
-        width: '99.5%',
-        height: '95.5%', 
-        position: 'absolute',
-      }
-    : {
-        top: '1.5%',
-        left: '1.25%',
-        width: '97.5%',
-        height: '89%',
-        position: 'absolute',
-      };
+  ? {
+      
+      top: '0.5%', // top edge
+      left: '1.5%', // left edge
+      width: '99.5%', // width of the screen cutout 
+      height: '95.5%',  // height of the screen cutout 
+      position: 'absolute', // make the screen position relative to its container
+    }
+  : {
+      
+      top: '1.5%', // desktop version: top offset to align screen properly
+      left: '1.25%', // left offset to center
+      width: '97.5%', // slightly narrower to fit screen frame
+      height: '89%', // height of the desktop screen area 
+      position: 'absolute',
+    };
+
 
   return (
     <div
@@ -51,7 +57,7 @@ const MonitorFrame = ({ children }) => {
           style={cutoutStyle}
         >
           <div className="w-full h-full relative">
-            {children}
+            {children} {/* content inside monitor */}
           </div>
         </div>
       </div>

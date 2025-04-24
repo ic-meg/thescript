@@ -30,7 +30,7 @@ const Software = () => {
         </p>
       </div>
 
-      {/* Image */}
+      {/* Video */}
       <div>
           <div className="flex justify-center items-center w-full my-4">
               <video 

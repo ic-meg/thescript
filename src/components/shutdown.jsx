@@ -12,13 +12,17 @@ const Shutdown = () => {
     "  Closing user interface"
   ], []);
 
+  // typewriter animation states
   const [currentLine, setCurrentLine] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [displayedLines, setDisplayedLines] = useState([]);
+
+   // blinking cursor + shutdown status flags
   const [blinker, setBlinker] = useState(true);
   const [isDone, setIsDone] = useState(false);
   const [shouldFadeOut, setShouldFadeOut] = useState(false);
 
+ // aafter shutdown redirect to "/"
   useEffect(() => {
     if (isDone) {
       const timeout = setTimeout(() => {
@@ -31,6 +35,7 @@ const Shutdown = () => {
     }
   }, [isDone, navigate]);
 
+  //blinking cursor effect 
   useEffect(() => {
     const blink = setInterval(() => {
       setBlinker(prev => !prev);
@@ -38,6 +43,7 @@ const Shutdown = () => {
     return () => clearInterval(blink);
   }, []);
 
+  // typewriter effect logic
   useEffect(() => {
     if (currentLine >= messages.length) {
       setIsDone(true);
