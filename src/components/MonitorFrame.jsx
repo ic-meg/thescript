@@ -44,9 +44,10 @@ const MonitorFrame = ({ children }) => {
       }}
     >
       <div
-        className={`relative w-full max-w-[1280px] ${aspect} bg-cover bg-no-repeat`}
+        className={`relative w-full max-w-[1280px] h-screen bg-cover bg-no-repeat`}
         style={{ backgroundImage: `url(${selectedMonitor})` }}
       >
+
         <div
           className="absolute z-10 bg-black rounded-sm overflow-hidden"
           style={cutoutStyle}
