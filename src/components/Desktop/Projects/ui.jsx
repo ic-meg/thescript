@@ -1,5 +1,9 @@
 import React from 'react';
 import softwareScreenshot from '../../../assets/images/landscape.jpg'; 
+import EMSPreview from '../../../assets/vids/EMSPreview.mp4'
+import TikTok from '../../../assets/vids/TiktokPreview.mp4'
+import FB from '../../../assets/vids/FBPreview.mp4'
+import ChurchPreview from '../../../assets/vids/ChurchPreview.mp4'
 
 const Software = () => {
   return (
@@ -26,28 +30,36 @@ const Software = () => {
         </p>
       </div>
 
-      {/* Image */}
+      {/* Image or Video */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+        <div className="flex justify-center items-center w-full my-4">
+            <video 
+              src={EMSPreview} 
+              muted 
+              autoPlay 
+              loop 
+              playsInline
+              preload='auto'          
+              className="border border-black w-full max-w-[850px] shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 1:</em> A screenshot of our team’s Espresso Markup Squad.
+        <em>Figure 1:</em> A preview of our team’s Espresso Markup Squad.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
+          <a href="https://youtu.be/a_CaS6UXUjk" target="_blank" rel="noopener noreferrer">
+            [YouTube] – Espresso Markup Squad
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://github.com/ic-meg/Espresso-Markup-Squad.git" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – EMS Repository
           </a>
         </li>
       </ul>
@@ -67,26 +79,29 @@ const Software = () => {
 
       {/* Image */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+        <div className="flex justify-center items-center w-full my-4">
+            <video 
+              src={TikTok} 
+              muted 
+              autoPlay 
+              loop 
+              playsInline
+              preload='auto'          
+              className="border border-black w-full max-w-[850px] shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 2:</em> A screenshot of our team’s Tiktok Mockup.
+        <em>Figure 2:</em> A preview of our team’s Tiktok Mockup.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://github.com/ic-meg/TikTok.git" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – TikTok Repository
           </a>
         </li>
       </ul>
@@ -108,16 +123,24 @@ const Software = () => {
         </p>
       </div>
 
-      {/* Image */}
+      {/* Image or vid */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+        <div className="flex justify-center items-center w-full my-4">
+            <video 
+              src={FB} 
+              muted 
+              autoPlay 
+              loop 
+              playsInline
+              preload='auto'          
+              className="border border-black w-full max-w-[850px] shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 3:</em> A screenshot of our team’s Facebook Mockup.
+        <em>Figure 3:</em> A preview of our team’s Facebook Mockup.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
@@ -149,28 +172,32 @@ const Software = () => {
         </p>
       </div>
 
-      {/* Image */}
+      {/* Image or Vid*/}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+        <div className="flex justify-center items-center w-full my-4">
+            <video 
+              src={ChurchPreview} 
+              muted 
+              autoPlay 
+              loop 
+              playsInline
+              preload='auto'
+              className="border border-black w-full max-w-[850px] shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 4:</em> A screenshot of our team’s Church Website.
+        <em>Figure 4:</em> A preview of our team’s Church Website.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
+
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://github.com/ic-meg/Baclaran-Church.git" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – Baclaran Church
           </a>
         </li>
       </ul>

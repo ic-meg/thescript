@@ -1,8 +1,12 @@
 import React from 'react';
-import softwareScreenshot from '../../../assets/images/landscape.jpg'; 
+// import softwareScreenshot from '../../../assets/images/landscape.jpg'; 
 
 import TeaSpillersPreview from '../../../assets/vids/TeaSpillersPreview.mp4'
 import AdmissionPreview from '../../../assets/vids/AdmissionPreview.mp4'
+import PLMPreview from '../../../assets/vids/ATMPreview.mp4'
+import EnrollPreview from '../../../assets/vids/EnrollmentPreview.mp4'
+import ThePreview from '../../../assets/vids/ThePreview.mp4'
+
 
 const Software = () => {
   return (
@@ -20,9 +24,9 @@ const Software = () => {
 
       {/* Portfolio */}
       <div>
-        <h3 className="text-[33px] font-black font-vt323 leading-tight">the&lt;script&gt;.com</h3>
+        <h3 className="text-[33px] font-black font-vt323 leading-tight">The&lt;script&gt; Portfolio</h3>
         <p className="text-[15px] -[750px] text-justify mt-2">
-          the&lt;script&gt;.com is our team’s portfolio site — the one you're viewing right now!
+          the&lt;script&gt;.vercel.app is our team’s portfolio site — the one you're viewing right now!
           This project was built as part of our Web Systems & Technologies 2 midterm.
           It's fully inspired by the classic Windows 95 look, and includes animated UI,
           retro assets, and project windows to simulate an old-school OS.
@@ -33,14 +37,22 @@ const Software = () => {
 
       {/* Image or video */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+        <div className="flex justify-center items-center w-full my-4">
+            <video 
+              src={ThePreview} 
+              muted 
+              autoPlay 
+              loop 
+              playsInline
+              preload='auto'
+              className="border border-black w-full max-w-[850px] shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 1:</em> A screenshot of our team’s retro-inspired portfolio interface.
+        <em>Figure 1:</em> A preview of our team’s retro-inspired portfolio interface.
       </p>
       </div>
       <p className="text-[15px] -[750px] text-justify mt-4">
@@ -55,7 +67,7 @@ const Software = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/ic-meg/thescript.git" target="_blank" rel="noopener noreferrer">
             [Github Repository] – The&lt;Script&gt; Repository
           </a>
         </li>
@@ -87,6 +99,8 @@ const Software = () => {
             muted 
             autoPlay 
             loop 
+            playsInline
+            preload='auto'           
             className="border border-black w-full max-w-[850px] shadow-md"
           >
             Your browser does not support the video tag.
@@ -117,38 +131,46 @@ const Software = () => {
            
        {/* ATM Machine (Java GUI)*/}
        <div>
-        <h3 className="text-[33px] font-black font-vt323 leading-tight">Java - ATM System</h3>
+        <h3 className="text-[33px] font-black font-vt323 leading-tight">PLM ATM Management System</h3>
         <p className="text-[15px] -[750px] text-justify mt-2">
           The ATM system is a self-service machine that allows people to do different banking tasks 
           like withdrawing cash, depositing money, checking account balances, transferring money, and paying bills, 
           all without needing to talk to a bank teller. 
           <br /><br />
-          This system is built using the Java programming language, which makes it secure and reliable. Java helps the ATM handle many transactions safely, with features like data protection and PIN verification to keep everything secure. 
+          This system is built using the Java's Graphical User Interface (GUI) framework, which makes it secure and reliable. Java helps the ATM handle many transactions safely, with features like data protection and PIN verification to keep everything secure. 
         </p>
       </div>
 
       {/* Image */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+      <div className="flex justify-center items-center w-full my-4">
+          <video 
+            src={PLMPreview} 
+            muted 
+            autoPlay 
+            loop 
+            playsInline
+            preload='auto'     
+            className="border border-black w-full max-w-[850px] shadow-md"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 3:</em> A screenshot of our team’s ATM System.
+        <em>Figure 3:</em> A preview of our team’s ATM Management System.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
+          <a href="https://youtu.be/EMpdLx9KnrU" target="_blank" rel="noopener noreferrer">
+            [YouTube] – ATM Management System - Demo
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://github.com/ic-meg/PLM-ATM-Management-System.git" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – ATM Management System Repository
           </a>
         </li>
       </ul>
@@ -177,6 +199,8 @@ const Software = () => {
                 muted 
                 autoPlay 
                 loop 
+                playsInline
+                preload='auto'
                 className="border border-black w-full max-w-[850px] shadow-md"
               >
                 Your browser does not support the video tag.
@@ -213,32 +237,35 @@ const Software = () => {
           the internet. It replaces the traditional, manual enrollment process by providing a fast, easy, and convenient way for 
           students, parents, and school staff to manage enrollment.
           <br /><br />
-          The Online Enrollment System was built using PHP, HTML, CSS, and SQL. We used PHP to handle the system's functions, like processing user requests and managing enrollments. HTML and CSS were used to design a simple and easy-to-use interface that works well on all devices. SQL helped us store and manage student data safely, making it easy to update and search information. By combining these tools, we created a smooth and efficient system for students and admins.
+          This ongoing project is being built using PHP, HTML, CSS, JS, and SQL. PHP handles the system's core functionalities like processing user actions and managing enrollments. HTML and CSS are used to create a responsive, user-friendly interface that works well across all devices. SQL is used for securely storing and managing student records, allowing for efficient updates and data retrieval. By combining these technologies, we are creating a streamlined, accessible system for both students and administrators.
         </p>
       </div>
 
       {/* Image */}
       <div>
-        <img
-          src={softwareScreenshot}
-          alt="Software Project Screenshot"
-          className="border border-black w-full -[850px] shadow-md"
-        />
+          <div className="flex justify-center items-center w-full my-4">
+              <video 
+                src={EnrollPreview} 
+                muted 
+                autoPlay 
+                playsInline
+                preload='auto'
+                loop 
+                className="border border-black w-full max-w-[850px] shadow-md"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
       <p className="text-sm text-center mt-2">
-        <em>Figure 4:</em> A screenshot of our team’s Online Enrollment system.
+        <em>Figure 4:</em> A preview of our team’s Online Enrollment system.
       </p>
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://youtu.be/FBk6lccTrTs" target="_blank" rel="noopener noreferrer">
+            [YouTube] – Online Enrollment System
           </a>
         </li>
       </ul>

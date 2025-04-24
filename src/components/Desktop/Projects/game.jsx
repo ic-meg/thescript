@@ -38,6 +38,8 @@ const Software = () => {
                 muted 
                 autoPlay 
                 loop 
+                playsInline
+                preload='auto'           
                 className="border border-black w-full max-w-[850px] shadow-md"
               >
                 Your browser does not support the video tag.
