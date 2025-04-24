@@ -1,5 +1,5 @@
 import React from 'react';
-import softwareScreenshot from '../../../assets/images/landscape.jpg'; 
+ 
 import EMSPreview from '../../../assets/vids/EMSPreview.mp4'
 import TikTok from '../../../assets/vids/TiktokPreview.mp4'
 import FB from '../../../assets/vids/FBPreview.mp4'
