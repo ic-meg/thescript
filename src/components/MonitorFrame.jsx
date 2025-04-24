@@ -18,7 +18,7 @@ const MonitorFrame = ({ children }) => {
     ? {
         top: '0.5%',
         left: '1.5%',
-        width: '99.3%',
+        width: '99.5%',
         height: '95.5%', 
         position: 'absolute',
       }
