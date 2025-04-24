@@ -52,6 +52,21 @@ npm install
 # Start the development server
 npm run dev
 ```
+>  Make sure these dependencies are already declared in package.json.
+>  If not, you can manually install them:
+
+```bash
+# Install Tailwind CSS & its peer dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Initialize Tailwind config (if not yet generated)
+npx tailwindcss init -p
+
+# Install EmailJS
+npm install @emailjs/browser
+
+```
+
 ## 📁 Folder Structure
 
 
