@@ -145,14 +145,10 @@ const Software = () => {
       </div>
       <h3 className="text-xl font-bold mt-10 mb-2">Links:</h3>
       <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
+
         <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [OS Site] – The&lt;Script&gt;.com
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-            [Github Repository] – The&lt;Script&gt; Repository
+          <a href="https://github.com/ic-meg/Facebook.git" target="_blank" rel="noopener noreferrer">
+            [Github Repository] – Facebook Repository
           </a>
         </li>
       </ul>
