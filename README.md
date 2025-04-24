@@ -54,7 +54,7 @@ npm run dev
 ```
 ## 📁 Folder Structure
 
-<pre><code> 
+
 ```bash  
 thescript-portfolio/
 ├── public/                    # Static files (HTML template, Dino game)
@@ -74,4 +74,4 @@ thescript-portfolio/
 ├── package.json               # Dependencies & scripts
 └── README.md                  # Project overview 
  ```
-</code></pre>
+
