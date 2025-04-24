@@ -157,7 +157,8 @@ const Taskbar = ({ openApps = [], onClickApp, toggleMute, isMuted, isMobile }) =
         <div
           ref={startMenuRef}
           className={`absolute ${isMobile ? 'bottom-[60px]' : 'bottom-[40px]'} left-2 z-[999] flex border shadow-lg
-          ${isMobile ? 'h-[180px] w-[180px]' : 'h-[150px] w-[150px] sm:w-[260px] sm:h-[300px]'} 
+          ${isMobile ? 'min-h-[200px] w-[200px]' : 'h-[150px] w-[150px] sm:w-[260px] sm:h-[300px]'}
+
           font-['Courier_New',_monospace]`}
         >
 
