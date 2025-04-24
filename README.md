@@ -35,6 +35,7 @@ Our portfolio mimics a vintage operating system desktop complete with draggable 
 
 ## ⚙️ Project Setup
 
+Make sure you have **Node.js** and **npm** installed. 
 > This project is already deployed at [thescript.vercel.app](https://thescript.vercel.app)  
 > If you want to run it locally for development or testing, follow these steps:
 
