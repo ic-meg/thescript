@@ -35,7 +35,8 @@ Our portfolio mimics a vintage operating system desktop complete with draggable 
 
 ## ⚙️ Project Setup
 
-Make sure you have **Node.js** and **npm** installed.
+> ✅ This project is already deployed at [thescript.vercel.app](https://thescript.vercel.app)  
+> If you want to run it locally for development or testing, follow these steps:
 
 ```bash
 # Clone the repository
@@ -49,8 +50,23 @@ npm install
 
 # Start the development server
 npm run dev
+```
+## 📁 Folder Structure
 
-
-### 📁 Folder Structure
-
-<pre lang="md"><code>### 📁 Folder Structure <code> thescript-portfolio/ ├── public/ # Static files (HTML template, Dino game) │ └── dinogame.html # Hidden dino game for nostalgia ├── src/ │ ├── assets/ # Images, videos, icons, sounds, fonts │ ├── components/ # Main components like Desktop, Taskbar, Members │ ├── pages/ # Startup screen, play mode │ ├── contexts/ # Global state (e.g., AudioContext) │ ├── App.jsx # Root component with routes │ ├── index.js # Entry point │ ├── App.css # App styling │ ├── scrollbar.css # Custom scrollbar styles │ └── tailwind.css # Tailwind entry file ├── tailwind.config.js # Tailwind config ├── postcss.config.js # PostCSS config ├── package.json # Dependencies & scripts └── README.md # Project overview (you are here) </code> </pre>
+thescript-portfolio/
+├── public/                    # Static files (HTML template, Dino game)
+│   └── dinogame.html          # Hidden dino game for nostalgia
+├── src/
+│   ├── assets/                # Images, videos, icons, sounds, fonts
+│   ├── components/            # Main components like Desktop, Taskbar, Members
+│   ├── pages/                 # Startup screen, play mode
+│   ├── contexts/              # Global state (e.g., AudioContext)
+│   ├── App.jsx                # Root component with routes
+│   ├── index.js               # Entry point
+│   ├── App.css                # App styling
+│   ├── scrollbar.css          # Custom scrollbar styles
+│   └── tailwind.css           # Tailwind entry file
+├── tailwind.config.js         # Tailwind config
+├── postcss.config.js          # PostCSS config
+├── package.json               # Dependencies & scripts
+└── README.md                  # Project overview (you are here)
