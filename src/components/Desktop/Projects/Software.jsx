@@ -216,7 +216,7 @@ const Software = () => {
         <ul className="list-disc pl-6 space-y-2 text-blue-700 font-mono underline">
           <li>
             <a href="https://youtu.be/QNC6hF-WZBQ" target="_blank" rel="noopener noreferrer">
-              [OS Site] – Online Admission and Examination System
+              [YouTube] – Online Admission and Examination System
             </a>
           </li>
           <li>
