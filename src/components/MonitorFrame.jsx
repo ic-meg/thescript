@@ -13,25 +13,22 @@ const MonitorFrame = ({ children }) => {
   }, []);
 
   const selectedMonitor = isMobile ? monitorPortrait : monitorLandscape;
-  const aspect = isMobile ? 'aspect-[9/16]' : 'aspect-[16/10]';
-
 
   const cutoutStyle = isMobile
-  ? {
-      top: '0.5%',
-      left: '1.5%',
-      width: '98.3%',
-      height: '98.5%',
-      position: 'absolute',
-    }
-  : {
-      top: '1.5%',
-      left: '1.25%',
-      width: '97.5%',
-      height: '89%',
-      position: 'absolute',
-    };
-
+    ? {
+        top: '0.5%',
+        left: '1.5%',
+        width: '99.3%',
+        height: '95.5%', 
+        position: 'absolute',
+      }
+    : {
+        top: '1.5%',
+        left: '1.25%',
+        width: '97.5%',
+        height: '89%',
+        position: 'absolute',
+      };
 
   return (
     <div
@@ -44,10 +41,11 @@ const MonitorFrame = ({ children }) => {
       }}
     >
       <div
-        className={`relative w-full max-w-[1280px] h-screen bg-cover bg-no-repeat`}
+        className={`relative w-full max-w-[1280px] ${
+          isMobile ? 'h-screen' : 'aspect-[16/10]'
+        } bg-cover bg-no-repeat`}
         style={{ backgroundImage: `url(${selectedMonitor})` }}
       >
-
         <div
           className="absolute z-10 bg-black rounded-sm overflow-hidden"
           style={cutoutStyle}
@@ -60,5 +58,6 @@ const MonitorFrame = ({ children }) => {
     </div>
   );
 };
+
 
 export default MonitorFrame;
