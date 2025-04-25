@@ -48,7 +48,6 @@ const team = [
 ];
 
 
-
 const Members =  ({ setActiveTab, activeTab }) => {
 
   return (
@@ -69,16 +68,17 @@ const Members =  ({ setActiveTab, activeTab }) => {
         </div>
 
 
-        <div className="flex justify-center border-b border-black pb-3">
-            <p className="text-[14px] leading-[1.8] font-mono text-justify  px-4 ">
-                We make things harder than they need to be, suffer through our own code, and still manage to laugh about it (eventually). Whether it's a broken layout or a last-minute deadline panic, we’re in this together—learning, messing up, fixing things, and occasionally questioning all our life choices.
-                But hey, that’s how we grow… right?
+        <div className="text-[14px] leading-[1.8] font-mono text-justify px-4 max-w-full">
+          <p>
+            We make things harder than they need to be, suffer through our own code, and still manage to laugh about it (eventually). Whether it's a broken layout or a last-minute deadline panic, we’re in this together—learning, messing up, fixing things, and occasionally questioning all our life choices.
+            But hey, that’s how we grow… right?
+          </p>
 
-                <br /><br />
-                <p className='text-center'>── Meet <span className="font-bold"> The&lt;Script&gt;</span> — the devs behind the bugs, fixes, and everything in between. ──</p>
-            </p>
-
+          <p className="text-center mt-6">
+            ── Meet <span className="font-bold">The&lt;Script&gt;</span> — the devs behind the bugs, fixes, and everything in between. ──
+          </p>
         </div>
+
 
         {/* Centered Profile */}
         <div
@@ -95,17 +95,16 @@ const Members =  ({ setActiveTab, activeTab }) => {
 
                 {/* Role + Email */}
                 <div className="relative w-[200px] h-[48px]">
-            <img
-                src={Box}
-                alt="Box background"
-                className="absolute inset-0 w-full h-full object-contain pointer-events-none"
-            />
-            <div className="absolute left-2 top-[2px] text-[15px] leading-[1.4] font-vt323">
-                <p>{team[0].role}</p>
-                <p className="mt-[2px]">{team[0].email}</p>
-            </div>
-            </div>
-
+                  <img
+                      src={Box}
+                      alt="Box background"
+                      className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                  />
+                <div className="absolute left-2 top-[2px] text-[15px] leading-[1.4] font-vt323">
+                    <p>{team[0].role}</p>
+                    <p className="mt-[2px]">{team[0].email}</p>
+                </div>
+              </div>
             </div>
         </div>
 

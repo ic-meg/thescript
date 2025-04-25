@@ -10,5 +10,9 @@ a, button, .cursor-pointer {
 
 html, body, #root {
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+.sidebar-layout-wrapper {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
