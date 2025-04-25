@@ -17,7 +17,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
     >
       <div
         ref={nodeRef}
-        className={`absolute m-0 p-0 ${isFullscreen ? 'top-0 left-0 w-full h-[93vh] sm:h-[70vh]' : 'top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px]'}
+        className={`absolute m-0 p-0 ${isFullscreen ? 'top-0 left-0 w-full h-[93dvh] sm:h-[70vh] md:h-[75vh] lg:h-[79vh] xl:h-[83vh] 2xl:h-[70vh] ' : 'top-[50px] left-[7vw] w-[90vw] max-w-[980px] h-[80vh] max-h-[600px]'}
           border-[3px] border-gray-800 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] bg-[#F0F0F0] z-50 
           font-['Courier_New',_monospace] flex flex-col overflow-hidden `}
       >
