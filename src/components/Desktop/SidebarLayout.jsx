@@ -22,10 +22,10 @@ const SidebarLayout = ({ activeTab, setActiveTab, children }) => {
 
       {/* Hamburger button */}
       <div className="md:hidden sticky top-0 z-50 px-4 py-2 flex justify-between items-center bg-[#E0E0E0] border-b border-[#A0A0A0] shadow-[inset_0_1px_0_#fff,inset_0_-1px_0_#999]">
-       
+        <span className="text-sm font-bold text-black font-['Courier_New']">Menu</span>
         <button
           onClick={() => setIsMobileMenuOpen(true)}
-          className="bg-[#D0D0D0] border border-[#555] px-[8px] py-[4px] rounded-sm shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#666] hover:bg-[#B0B0B0] transition"
+          className="bg-[#D0D0D0] border border-[#555] px-[10px] py-[6px] rounded-sm shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#666] hover:bg-[#B0B0B0] transition"
         >
           <HiMenu size={18} className="text-black" />
         </button>

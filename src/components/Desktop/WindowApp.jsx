@@ -64,7 +64,7 @@ const WindowApp = ({ title, icon, onClose, onMinimize, children }) => {
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto w-full p-0 md:pt-2 text-sm text-black">
+        <div className="flex-1 overflow-y-auto w-full p-0 md:pt-0 text-sm text-black">
           {children}
         </div>
 
