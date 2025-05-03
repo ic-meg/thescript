@@ -31,7 +31,7 @@ const Meg = () => {
     return (
         <MemberProfile
           name="Meg Angeline V. Fabian"
-          title="Project Manager, Frontend Developer, Designer"
+          title="Full-Stack Developer"
           email="fabian.megangeline2003@gmail.com"
           hashtag="#ByteMeMeg"
           avatar={avatar}
